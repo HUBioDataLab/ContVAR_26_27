@@ -1,0 +1,49 @@
+{
+  "python": "python3",
+  "esm_model": "esm2_t33_650M_UR50D",
+  "paths": {
+    "go_dataset": "data/processed/go_pretrain_dataset.pkl",
+    "go_split": "phase0_protein_split_removed_graphless.json",
+    "triplet_json": "triplet_data.json",
+    "phase1_split_json": "dms_protein_split.json",
+    "phase1_reference_csv": "data/raw/DMS_ProteinGym_substitutions/0_DMS_substitutions_reference_file.csv",
+    "phase1_proteins_csv": "data/proteins 2.csv",
+    "goa_tsv": "data/goa_2025-12-04_swissprot_noiea.tsv",
+    "sequences_json": "data/raw/uniprot_dict.json"
+  },
+  "work_dir": "artifacts/pipeline_run",
+  "phase0": {
+    "enabled": true,
+    "epochs": 50,
+    "batch_size": 1,
+    "accum_steps": 8,
+    "freeze_layers": 25,
+    "samples_per_epoch": 10000,
+    "max_seq_len": 1022,
+    "val_every_samples": 2000,
+    "checkpoint_every": 5,
+    "keep_checkpoints": 3,
+    "cuda": null,
+    "run_name": "phase0_go_pretrain",
+    "no_wandb": false
+  },
+  "phase1": {
+    "enabled": true,
+    "epochs": 20,
+    "batch_size": 4,
+    "last_trainable_layers": 8,
+    "max_seq_len": 1022,
+    "cuda": null,
+    "run_name": "phase1_dms_backbone_finetune",
+    "project_name": "contvar-phase1-dms-backbone",
+    "no_wandb": false
+  },
+  "decoder": {
+    "enabled": true,
+    "aspect": "F",
+    "cuda": null,
+    "embedding_batch_size": 4,
+    "max_seq_len": 1022,
+    "variant_h5": null
+  }
+}

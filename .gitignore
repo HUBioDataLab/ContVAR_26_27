@@ -1,0 +1,41 @@
+# Python / Environment
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+
+# Logs & Tracking
+wandb/
+logs/
+artifacts/
+
+# Model Weights & Large Data Binaries
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.pkl
+*.zip
+*.tar.gz
+*.cif
+*.mmcif
+*.pdb
+
+# Unified Data Directory (keep only README.md)
+data/*
+!data/README.md
+
+# Run Outputs & Checkpoints
+decoder/phase_3_variant_decoder/runs/*.pt
+decoder/phase_3_variant_decoder/runs/*.bak*
+encoder/graph_encoder/protein_triplets_data/processed/
+
+# Unpublished PDFs (keep proposal.pdf tracked)
+docs/ContVAR_Graph_Paper.pdf

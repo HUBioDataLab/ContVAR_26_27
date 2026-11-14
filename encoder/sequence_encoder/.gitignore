@@ -1,0 +1,43 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+artifacts/
+wandb/
+.vscode
+.claude
+CLAUDE.md
+.ipynb_checkpoints/
+logs/
+
+# Local scratch / duplicate files
+phase_2_decoder/* 2.py
+
+# Exported reports
+reports/
+*.pdf
+
+# Large data - keep out of GitHub
+data/processed/*
+data/raw/semantic_similarities/
+data/raw/DMS_ProteinGym_substitutions/
+data/raw/uniprot_dict.json
+data/raw/go-basic.obo
+data/raw/goa_2025-12-04_swissprot_noiea.tsv
+models/go_pretrained/*
+models/dms_finetune/*
+data/raw/semantic_similarity_swissprot_filtered_low0.2_high0.8_bp.tsv
+data/raw/semantic_similarity_swissprot_filtered_low0.2_high0.8_cc.tsv
+data/raw/semantic_similarity_swissprot_filtered_low0.2_high0.8_mf.tsv
+data/*
+
+# Grid search run outputs (model checkpoints, vocab files)
+updated_version/
+
+# Phase 3 checkpoints (~25-45MB each, 20 architectures) and session backups —
+# results.csv / go_vocab*.json / best_*.json are small and kept for
+# reproducibility, only the model weights and throwaway .bak files are excluded.
+phase_3_variant_decoder/runs/*.pt
+phase_3_variant_decoder/runs/*.bak
+phase_3_variant_decoder/runs/*.bak_*
+
