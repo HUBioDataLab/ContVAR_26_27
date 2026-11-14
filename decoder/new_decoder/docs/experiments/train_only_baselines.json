@@ -1,0 +1,26 @@
+{
+  "easy": {
+    "val": {
+      "majority_class": 0.27530228860717126,
+      "go_only_train_majority": 0.6590782459699095,
+      "protein_go_train_majority_with_go_fallback": 0.7644590310678171
+    },
+    "test": {
+      "majority_class": 0.2772243067235951,
+      "go_only_train_majority": 0.6190975526972905,
+      "protein_go_train_majority_with_go_fallback": 0.703131229104269
+    }
+  },
+  "hard": {
+    "val": {
+      "majority_class": 0.2753383695310041,
+      "go_only_train_majority": 0.5441533666938606,
+      "protein_go_train_majority_with_go_fallback": 0.5441533666938606
+    },
+    "test": {
+      "majority_class": 0.2789413481639254,
+      "go_only_train_majority": 0.5535557325604455,
+      "protein_go_train_majority_with_go_fallback": 0.5535557325604455
+    }
+  }
+}

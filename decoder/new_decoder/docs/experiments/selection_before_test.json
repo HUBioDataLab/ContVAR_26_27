@@ -1,0 +1,14 @@
+{
+  "easy": {
+    "parallel_score_difference": "parallel_score_difference_lambda0",
+    "parallel_joint": "parallel_joint_lambda0",
+    "multiclass_score_difference": "multiclass_score_difference_lambda0",
+    "multiclass_joint": "multiclass_joint_lambda0"
+  },
+  "hard": {
+    "parallel_score_difference": "parallel_score_difference_lambda0",
+    "parallel_joint": "parallel_joint_lambda0",
+    "multiclass_score_difference": "multiclass_score_difference_lambda0",
+    "multiclass_joint": "multiclass_joint_lambda0"
+  }
+}
