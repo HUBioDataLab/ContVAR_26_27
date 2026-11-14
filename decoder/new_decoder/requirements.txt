@@ -1,0 +1,6 @@
+# Runtime minima for this module; the repository's root requirements are unchanged.
+torch>=2.2
+numpy>=1.26
+pandas>=2.2
+h5py>=3.11
+scikit-learn>=1.4

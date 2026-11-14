@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "date": "2026-11-14",
+  "no_full_training_rerun": true,
+  "synthetic_four_model_initialization_and_state_keys_identical": [
+    "parallel/joint",
+    "parallel/score_difference",
+    "multiclass/joint",
+    "multiclass/score_difference"
+  ],
+  "full_validation_checkpoint_readbacks": [
+    {
+      "family": "easy",
+      "model": "parallel_score_difference_lambda0",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "easy",
+      "model": "parallel_joint_lambda0",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "easy",
+      "model": "parallel_joint_lambda0.1",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "easy",
+      "model": "multiclass_score_difference_lambda0",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "easy",
+      "model": "multiclass_joint_lambda0",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "easy",
+      "model": "multiclass_joint_lambda0.1",
+      "validation_rows": 4677,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "parallel_score_difference_lambda0",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "parallel_joint_lambda0",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "parallel_joint_lambda0.1",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "multiclass_score_difference_lambda0",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "multiclass_joint_lambda0",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    },
+    {
+      "family": "hard",
+      "model": "multiclass_joint_lambda0.1",
+      "validation_rows": 4973,
+      "metrics_identical": true
+    }
+  ],
+  "historical_source": "standalone v1 full_seed42 frozen checkpoints",
+  "note": "Historical test results were not used to tune this integration.",
+  "reprepared_real_tables_byte_identical": {
+    "parallel/easy_train.tsv": "14237f9a8d1bd0041ed8484f04a0f957634335bd9554583da082f338553a21f1",
+    "parallel/easy_val.tsv": "3cbe394ae9e126e09bef7b50f4b8ec99475aa4f0fcd189bc2d7942e4a8a99d48",
+    "parallel/easy_test.tsv": "74218db57617aea12e012ebbaed7ec47623074265e2bc2bcc02492ec30a1ca5f",
+    "parallel/hard_train.tsv": "9f6806ddc9bf17795b1df1a493697f6922d28f2a9fa239142d128fb2cc2a2a02",
+    "parallel/hard_val.tsv": "c06a4b4b04a06eb105ccb8875f8d7a24916ad733912b8292786a303223ca48f0",
+    "parallel/hard_test.tsv": "f7bb12086bce8b3af2be4122eb9d1c447e6ec1d0fd1a30297c72b45aad451bd6",
+    "multiclass/easy_train.tsv": "81cf7c36d2a6ae93c0c210905c779d9608cb0d364acb2ad4eba2d8bdb4f2b9f1",
+    "multiclass/easy_val.tsv": "883a29cc220ec75489d68accdc89c6b5cd65b06a11c4344de86111a440cf7f86",
+    "multiclass/easy_test.tsv": "d588523131d5ea7a98c1c56738ae22e1e3c2f1f4e1bd0f89e71cb645d9c82d86",
+    "multiclass/hard_train.tsv": "85fcadc2625b00e0d28e432266d98fffce999de4b86f67ee5b8f41d5cfb7b8d5",
+    "multiclass/hard_val.tsv": "07c0362cba078504b807216a8090821870425cd71b581fe7c1bdea98721f425e",
+    "multiclass/hard_test.tsv": "74286235201994bd4614c5a08e6431b481b51f3610806da7fac59cd79febdd99"
+  }
+}
