@@ -54,6 +54,7 @@ ContVAR_26_27/
 │
 ├── decoder/                       # Variant–GO effect classification models
 │   ├── phase_3_variant_decoder/   # Baseline decoders (MLP, Cascade, Parallel), data loaders & metrics
+│   ├── new_decoder/               # New GO-conditioned attention & local-comparison (`LOCAL_PAIR`) decoder
 │   └── example_load.py            # Quick verification script to load WT/VAR/Window/GO batches
 │
 ├── data/                          # Local datasets & embeddings (git-ignored; see Section 4)
