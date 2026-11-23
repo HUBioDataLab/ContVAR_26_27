@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "conditions_checked": [
+    {
+      "window_mode": "none",
+      "head": "parallel",
+      "pair_mode": "score_difference",
+      "batch_loss": 0.7489670515060425
+    },
+    {
+      "window_mode": "none",
+      "head": "multiclass",
+      "pair_mode": "score_difference",
+      "batch_loss": 1.5373950004577637
+    },
+    {
+      "window_mode": "none",
+      "head": "parallel",
+      "pair_mode": "joint",
+      "batch_loss": 0.6942345499992371
+    },
+    {
+      "window_mode": "none",
+      "head": "multiclass",
+      "pair_mode": "joint",
+      "batch_loss": 0.895327627658844
+    },
+    {
+      "window_mode": "mean",
+      "head": "parallel",
+      "pair_mode": "score_difference",
+      "batch_loss": 0.7509519457817078
+    },
+    {
+      "window_mode": "mean",
+      "head": "multiclass",
+      "pair_mode": "score_difference",
+      "batch_loss": 1.5322691202163696
+    },
+    {
+      "window_mode": "mean",
+      "head": "parallel",
+      "pair_mode": "joint",
+      "batch_loss": 0.6019924879074097
+    },
+    {
+      "window_mode": "mean",
+      "head": "multiclass",
+      "pair_mode": "joint",
+      "batch_loss": 1.0701521635055542
+    },
+    {
+      "window_mode": "pair_mean",
+      "head": "parallel",
+      "pair_mode": "joint",
+      "batch_loss": 0.5907782316207886
+    },
+    {
+      "window_mode": "pair_mean",
+      "head": "multiclass",
+      "pair_mode": "joint",
+      "batch_loss": 0.8355944752693176
+    },
+    {
+      "window_mode": "esim",
+      "head": "parallel",
+      "pair_mode": "joint",
+      "batch_loss": 0.5648902654647827
+    },
+    {
+      "window_mode": "esim",
+      "head": "multiclass",
+      "pair_mode": "joint",
+      "batch_loss": 0.6580514311790466
+    }
+  ],
+  "extra_training_runs": 0,
+  "common_test": {
+    "easy": {
+      "rows": 1030,
+      "proteins": 756,
+      "variants": 997,
+      "go_terms": 421,
+      "labels": {
+        "LOF": 785,
+        "GOF": 42,
+        "NEUTRAL": 203
+      },
+      "augmented": 0,
+      "conflicting_keys": 2,
+      "conflicting_rows": 4,
+      "same_label_duplicate_extra": 2
+    },
+    "hard": {
+      "rows": 399,
+      "proteins": 70,
+      "variants": 330,
+      "go_terms": 106,
+      "labels": {
+        "LOF": 284,
+        "GOF": 17,
+        "NEUTRAL": 98
+      },
+      "augmented": 0,
+      "conflicting_keys": 0,
+      "conflicting_rows": 0,
+      "same_label_duplicate_extra": 2
+    }
+  },
+  "device": "cuda"
+}

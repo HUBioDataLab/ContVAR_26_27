@@ -1,0 +1,206 @@
+parallel_score_difference
+PairedGODecoder(
+  (adapters): ModuleDict(
+    (mut): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+    (global): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+  )
+  (go_adapter): Sequential(
+    (0): LayerNorm((200,), eps=1e-05, elementwise_affine=True, bias=True)
+    (1): Linear(in_features=200, out_features=128, bias=True)
+    (2): GELU(approximate='none')
+  )
+  (shared_reader): GOReader(
+    (context): TransformerEncoderLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+      )
+      (linear1): Linear(in_features=128, out_features=256, bias=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+      (linear2): Linear(in_features=256, out_features=128, bias=True)
+      (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (dropout1): Dropout(p=0.0, inplace=False)
+      (dropout2): Dropout(p=0.0, inplace=False)
+    )
+    (attention): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+    )
+    (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (ffn): Sequential(
+      (0): Linear(in_features=128, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=128, bias=True)
+    )
+  )
+  (side_scorer): Sequential(
+    (0): Linear(in_features=256, out_features=128, bias=True)
+    (1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=128, out_features=2, bias=True)
+  )
+)
+
+parallel_joint
+PairedGODecoder(
+  (adapters): ModuleDict(
+    (mut): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+    (global): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+  )
+  (go_adapter): Sequential(
+    (0): LayerNorm((200,), eps=1e-05, elementwise_affine=True, bias=True)
+    (1): Linear(in_features=200, out_features=128, bias=True)
+    (2): GELU(approximate='none')
+  )
+  (shared_reader): GOReader(
+    (context): TransformerEncoderLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+      )
+      (linear1): Linear(in_features=128, out_features=256, bias=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+      (linear2): Linear(in_features=256, out_features=128, bias=True)
+      (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (dropout1): Dropout(p=0.0, inplace=False)
+      (dropout2): Dropout(p=0.0, inplace=False)
+    )
+    (attention): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+    )
+    (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (ffn): Sequential(
+      (0): Linear(in_features=128, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=128, bias=True)
+    )
+  )
+  (fusion): Sequential(
+    (0): Linear(in_features=384, out_features=128, bias=True)
+    (1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.1, inplace=False)
+  )
+  (lof_head): Linear(in_features=128, out_features=1, bias=True)
+  (gof_head): Linear(in_features=128, out_features=1, bias=True)
+)
+
+multiclass_score_difference
+PairedGODecoder(
+  (adapters): ModuleDict(
+    (mut): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+    (global): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+  )
+  (go_adapter): Sequential(
+    (0): LayerNorm((200,), eps=1e-05, elementwise_affine=True, bias=True)
+    (1): Linear(in_features=200, out_features=128, bias=True)
+    (2): GELU(approximate='none')
+  )
+  (shared_reader): GOReader(
+    (context): TransformerEncoderLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+      )
+      (linear1): Linear(in_features=128, out_features=256, bias=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+      (linear2): Linear(in_features=256, out_features=128, bias=True)
+      (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (dropout1): Dropout(p=0.0, inplace=False)
+      (dropout2): Dropout(p=0.0, inplace=False)
+    )
+    (attention): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+    )
+    (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (ffn): Sequential(
+      (0): Linear(in_features=128, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=128, bias=True)
+    )
+  )
+  (side_scorer): Sequential(
+    (0): Linear(in_features=256, out_features=128, bias=True)
+    (1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+
+multiclass_joint
+PairedGODecoder(
+  (adapters): ModuleDict(
+    (mut): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+    (global): Sequential(
+      (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True, bias=True)
+      (1): Linear(in_features=1280, out_features=128, bias=True)
+      (2): GELU(approximate='none')
+    )
+  )
+  (go_adapter): Sequential(
+    (0): LayerNorm((200,), eps=1e-05, elementwise_affine=True, bias=True)
+    (1): Linear(in_features=200, out_features=128, bias=True)
+    (2): GELU(approximate='none')
+  )
+  (shared_reader): GOReader(
+    (context): TransformerEncoderLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+      )
+      (linear1): Linear(in_features=128, out_features=256, bias=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+      (linear2): Linear(in_features=256, out_features=128, bias=True)
+      (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+      (dropout1): Dropout(p=0.0, inplace=False)
+      (dropout2): Dropout(p=0.0, inplace=False)
+    )
+    (attention): MultiheadAttention(
+      (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+    )
+    (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (ffn): Sequential(
+      (0): Linear(in_features=128, out_features=256, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=256, out_features=128, bias=True)
+    )
+  )
+  (fusion): Sequential(
+    (0): Linear(in_features=384, out_features=128, bias=True)
+    (1): LayerNorm((128,), eps=1e-05, elementwise_affine=True, bias=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.1, inplace=False)
+  )
+  (class_head): Linear(in_features=128, out_features=3, bias=True)
+)

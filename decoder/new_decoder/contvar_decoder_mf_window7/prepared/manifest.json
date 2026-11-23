@@ -1,0 +1,554 @@
+{
+  "format": "contvar_mf_window7_prepared_v1",
+  "created": "2026-11-18T01:17:05.000913+00:00",
+  "source_data": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context",
+  "source_cohorts": {
+    "old": "prepared_old_subset_without_1499_proteins",
+    "full": "prepared_full_all_proteins"
+  },
+  "source_table_sha256": {
+    "prepared_old_subset_without_1499_proteins\\easy_train.tsv": "1b27144700c2bfa6fef33b2b65a304a1155ad15dcef84a2b77c48609bbc490e3",
+    "prepared_old_subset_without_1499_proteins\\easy_val.tsv": "6c3bcbbabab1d60d5342c2fdf3e9fcd7acc309a7f5b7fa3412bed0226818db6c",
+    "prepared_old_subset_without_1499_proteins\\easy_test.tsv": "bac1f20bf2255498dfe4f6dfec78f96c740675bea47d41f0e4a0d7df76465928",
+    "prepared_old_subset_without_1499_proteins\\hard_train.tsv": "b80504ec1462071403cdb814b47baf2805d9fab7cf4c86d139d48c546dc5697b",
+    "prepared_old_subset_without_1499_proteins\\hard_val.tsv": "91468ccd6d347ca812c69308c769ad251b31e6b00f38c20d29b98b3638dbd10d",
+    "prepared_old_subset_without_1499_proteins\\hard_test.tsv": "9f8e7fa474827c1a2e70d84a6424434dcba1c5214775c8ce767aca73fc31e0a9",
+    "prepared_full_all_proteins\\easy_train.tsv": "755309a1eb4f4b707de386669c632d6b1e27b48b218f69a7ba7a139fd1dc5fb2",
+    "prepared_full_all_proteins\\easy_val.tsv": "0b9f0a34bac50cb4d8c0b71d85733168dcdcbac31774c4986a8596b143090ad8",
+    "prepared_full_all_proteins\\easy_test.tsv": "f7fa0b50f1b07e0dfcc820d8f3c44c9796838c95982960fb82f73250c872327e",
+    "prepared_full_all_proteins\\hard_train.tsv": "9a2c8d125ec0c2e6fd4390cde6102ea1ef24a23f8445ad5da0a9ffe4bb5fe95f",
+    "prepared_full_all_proteins\\hard_val.tsv": "cc962a339f29c4e85322198bcc73ec74a53e7866212a2a806302ae957e77f201",
+    "prepared_full_all_proteins\\hard_test.tsv": "16b6d61850c5c6213c652e25926f04a4c8f2b65b3552ff0f09065dcbffe98a41"
+  },
+  "source_feature_sha256": {
+    "global": "c36fa793df3fa45e1800c86d447bebb5aa5b874660603303430e75b9a33197d8",
+    "mut": "fae3686dc02de9f137bbd9cf7ea110a1c5d2294be257a190d2649672239cce02",
+    "window": "766694592b97eb72e79a0964ee276d068db9286351c50dfa3b1de7deddf2a136",
+    "go": "4572ad49d87865dccb80328f6fcec95ed06b103801e9fd212b940ff1dd380fe7"
+  },
+  "sequences_sha256": "5beb482f28e605bcf4de7a8453748d3f9f6cbac8de534526e67b3965c796a1a0",
+  "ontology": {
+    "graph_id": "http://purl.obolibrary.org/obo/go.owl",
+    "version": "http://purl.obolibrary.org/obo/go/releases/2026-07-26/go.owl",
+    "sha256": "531d85b2e7a6d4b91290093b487f228994123cec3f45a50136cad2c4b91862ac"
+  },
+  "feature_cache": "features_window7.h5",
+  "feature_cache_sha256": "724c49574eebf959e161c20e4f801544004e5c549800fa06c3b0271ec029379e",
+  "policy": {
+    "namespace": "molecular_function",
+    "combinatorial": false,
+    "train_augmentation": "retain existing only",
+    "evaluation_augmentation": false,
+    "augmentation_detection": "source-validated broad_neutral_broadcast",
+    "conflicts": "retain",
+    "duplicates": "retain multiplicity",
+    "source_partitions": "preserve per cohort",
+    "window_size": 7,
+    "crop": [
+      13,
+      20
+    ],
+    "additional_biological_filters": false,
+    "technical_exclusions": "only genuinely unusable inputs, logged and shared by every model condition"
+  },
+  "tables": {
+    "old/easy/train": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\easy_train.tsv",
+      "source_rows": 46953,
+      "selected_before_embedding_check": 23785,
+      "exclusions": {
+        "is_combinatorial_true": 6475,
+        "not_molecular_function": 16693
+      },
+      "technical_excluded_rows": 9,
+      "technical_exclusions": {
+        "global:O15393_Y414A;mut:O15393_414;mut:O15393_Y414A;window:O15393_414;window:O15393_Y414A": 1,
+        "global:O15393_Y414S;mut:O15393_414;mut:O15393_Y414S;window:O15393_414;window:O15393_Y414S": 1,
+        "global:O15393_Y414L;mut:O15393_414;mut:O15393_Y414L;window:O15393_414;window:O15393_Y414L": 1,
+        "global:O15393_Y414R;mut:O15393_414;mut:O15393_Y414R;window:O15393_414;window:O15393_Y414R": 1,
+        "global:Q9I485;global:Q9I485_D35A;mut:Q9I485_35;mut:Q9I485_D35A;window:Q9I485_35;window:Q9I485_D35A": 1,
+        "global:Q9I485;global:Q9I485_C207A;mut:Q9I485_207;mut:Q9I485_C207A;window:Q9I485_207;window:Q9I485_C207A": 1,
+        "global:P40802;global:P40802_K80A;mut:P40802_80;mut:P40802_K80A;window:P40802_80;window:P40802_K80A": 1,
+        "global:P40802;global:P40802_K232A;mut:P40802_232;mut:P40802_K232A;window:P40802_232;window:P40802_K232A": 1,
+        "global:P40802;global:P40802_H235A;mut:P40802_235;mut:P40802_H235A;window:P40802_235;window:P40802_H235A": 1
+      },
+      "final": {
+        "rows": 23776,
+        "proteins": 6807,
+        "variants": 21500,
+        "go_terms": 2718,
+        "labels": {
+          "LOF": 17454,
+          "GOF": 1447,
+          "NEUTRAL": 4875
+        },
+        "augmented": 0,
+        "conflicting_keys": 56,
+        "conflicting_rows": 120,
+        "same_label_duplicate_extra": 192
+      },
+      "sha256": "4cc6a4e3419ea4b152cf6bf841ec3009abb67c328fb124d700703a642c777eaf"
+    },
+    "old/easy/val": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\easy_val.tsv",
+      "source_rows": 5819,
+      "selected_before_embedding_check": 2653,
+      "exclusions": {
+        "not_molecular_function": 2164,
+        "is_combinatorial_true": 1002
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 2653,
+        "proteins": 1730,
+        "variants": 2470,
+        "go_terms": 1045,
+        "labels": {
+          "LOF": 1972,
+          "GOF": 166,
+          "NEUTRAL": 515
+        },
+        "augmented": 0,
+        "conflicting_keys": 5,
+        "conflicting_rows": 10,
+        "same_label_duplicate_extra": 13
+      },
+      "sha256": "e61202dd9a206f395811fd3cfc33fe4ab593b5816dbea20042a41b24513ce0b1"
+    },
+    "old/easy/test": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\easy_test.tsv",
+      "source_rows": 4538,
+      "selected_before_embedding_check": 2974,
+      "exclusions": {
+        "not_molecular_function": 1534,
+        "is_combinatorial_true": 30
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 2974,
+        "proteins": 1626,
+        "variants": 2858,
+        "go_terms": 724,
+        "labels": {
+          "LOF": 2306,
+          "GOF": 120,
+          "NEUTRAL": 548
+        },
+        "augmented": 0,
+        "conflicting_keys": 4,
+        "conflicting_rows": 8,
+        "same_label_duplicate_extra": 10
+      },
+      "sha256": "2db11aac5c030e19a653853ee9982b042b78809bcdff2cce603fd82549e51777"
+    },
+    "old/hard/train": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\hard_train.tsv",
+      "source_rows": 47098,
+      "selected_before_embedding_check": 23930,
+      "exclusions": {
+        "is_combinatorial_true": 6364,
+        "not_molecular_function": 16804
+      },
+      "technical_excluded_rows": 9,
+      "technical_exclusions": {
+        "global:O15393_Y414A;mut:O15393_414;mut:O15393_Y414A;window:O15393_414;window:O15393_Y414A": 1,
+        "global:O15393_Y414S;mut:O15393_414;mut:O15393_Y414S;window:O15393_414;window:O15393_Y414S": 1,
+        "global:O15393_Y414L;mut:O15393_414;mut:O15393_Y414L;window:O15393_414;window:O15393_Y414L": 1,
+        "global:O15393_Y414R;mut:O15393_414;mut:O15393_Y414R;window:O15393_414;window:O15393_Y414R": 1,
+        "global:Q9I485;global:Q9I485_D35A;mut:Q9I485_35;mut:Q9I485_D35A;window:Q9I485_35;window:Q9I485_D35A": 1,
+        "global:Q9I485;global:Q9I485_C207A;mut:Q9I485_207;mut:Q9I485_C207A;window:Q9I485_207;window:Q9I485_C207A": 1,
+        "global:P40802;global:P40802_K80A;mut:P40802_80;mut:P40802_K80A;window:P40802_80;window:P40802_K80A": 1,
+        "global:P40802;global:P40802_K232A;mut:P40802_232;mut:P40802_K232A;window:P40802_232;window:P40802_K232A": 1,
+        "global:P40802;global:P40802_H235A;mut:P40802_235;mut:P40802_H235A;window:P40802_235;window:P40802_H235A": 1
+      },
+      "final": {
+        "rows": 23921,
+        "proteins": 6064,
+        "variants": 21559,
+        "go_terms": 2551,
+        "labels": {
+          "LOF": 17643,
+          "GOF": 1400,
+          "NEUTRAL": 4878
+        },
+        "augmented": 0,
+        "conflicting_keys": 55,
+        "conflicting_rows": 113,
+        "same_label_duplicate_extra": 190
+      },
+      "sha256": "629009cd8ac4c717f3c83c794032bbf458e4820f579ae57119f3e29ffbf98c28"
+    },
+    "old/hard/val": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\hard_val.tsv",
+      "source_rows": 5825,
+      "selected_before_embedding_check": 3003,
+      "exclusions": {
+        "is_combinatorial_true": 746,
+        "not_molecular_function": 2076
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3003,
+        "proteins": 722,
+        "variants": 2711,
+        "go_terms": 646,
+        "labels": {
+          "LOF": 2201,
+          "GOF": 156,
+          "NEUTRAL": 646
+        },
+        "augmented": 0,
+        "conflicting_keys": 10,
+        "conflicting_rows": 25,
+        "same_label_duplicate_extra": 39
+      },
+      "sha256": "7b73722c60ca6b88238ab702e009d6aa96306708839cec3819a9a89f7f9a2e7e"
+    },
+    "old/hard/test": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_old_subset_without_1499_proteins\\hard_test.tsv",
+      "source_rows": 5864,
+      "selected_before_embedding_check": 3065,
+      "exclusions": {
+        "is_combinatorial_true": 710,
+        "not_molecular_function": 2089
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3065,
+        "proteins": 692,
+        "variants": 2723,
+        "go_terms": 637,
+        "labels": {
+          "LOF": 2269,
+          "GOF": 210,
+          "NEUTRAL": 586
+        },
+        "augmented": 0,
+        "conflicting_keys": 1,
+        "conflicting_rows": 2,
+        "same_label_duplicate_extra": 23
+      },
+      "sha256": "807d8c605be5d52ea5aa4a16333eb10e0594aa3de913ef5ab132cf0e9b2c04f8"
+    },
+    "full/easy/train": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\easy_train.tsv",
+      "source_rows": 60104,
+      "selected_before_embedding_check": 31576,
+      "exclusions": {
+        "is_combinatorial_true": 8009,
+        "not_molecular_function": 20519
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 31576,
+        "proteins": 8252,
+        "variants": 26638,
+        "go_terms": 3334,
+        "labels": {
+          "LOF": 20924,
+          "GOF": 1720,
+          "NEUTRAL": 8932
+        },
+        "augmented": 3284,
+        "conflicting_keys": 82,
+        "conflicting_rows": 175,
+        "same_label_duplicate_extra": 256
+      },
+      "sha256": "dd731a14b6f4b6809a1a318cac98cc4574c02355cdc50d9559cfc671f7f9c457"
+    },
+    "full/easy/val": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\easy_val.tsv",
+      "source_rows": 6837,
+      "selected_before_embedding_check": 3250,
+      "exclusions": {
+        "not_molecular_function": 2398,
+        "is_combinatorial_true": 1188,
+        "evaluation_augmentation": 1
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3250,
+        "proteins": 2067,
+        "variants": 3009,
+        "go_terms": 1222,
+        "labels": {
+          "LOF": 2363,
+          "GOF": 225,
+          "NEUTRAL": 662
+        },
+        "augmented": 0,
+        "conflicting_keys": 20,
+        "conflicting_rows": 42,
+        "same_label_duplicate_extra": 41
+      },
+      "sha256": "ef7237e0f5cfbded4aca769f7612ccb989f1b6de60ca4a55daa0a78de8e32d8a"
+    },
+    "full/easy/test": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\easy_test.tsv",
+      "source_rows": 5308,
+      "selected_before_embedding_check": 3330,
+      "exclusions": {
+        "not_molecular_function": 1886,
+        "is_combinatorial_true": 85,
+        "evaluation_augmentation": 7
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3330,
+        "proteins": 1847,
+        "variants": 3212,
+        "go_terms": 787,
+        "labels": {
+          "LOF": 2583,
+          "GOF": 114,
+          "NEUTRAL": 633
+        },
+        "augmented": 0,
+        "conflicting_keys": 3,
+        "conflicting_rows": 6,
+        "same_label_duplicate_extra": 7
+      },
+      "sha256": "7757b6d51477fcc6e4ad751b5c2ed13a106effc9ae782368a47d12da28d3a22e"
+    },
+    "full/hard/train": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\hard_train.tsv",
+      "source_rows": 59667,
+      "selected_before_embedding_check": 31461,
+      "exclusions": {
+        "not_molecular_function": 20554,
+        "is_combinatorial_true": 7652
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 31461,
+        "proteins": 7221,
+        "variants": 26625,
+        "go_terms": 3123,
+        "labels": {
+          "LOF": 21011,
+          "GOF": 1737,
+          "NEUTRAL": 8713
+        },
+        "augmented": 3011,
+        "conflicting_keys": 91,
+        "conflicting_rows": 191,
+        "same_label_duplicate_extra": 258
+      },
+      "sha256": "055552660533801e537cdcdcecc47afd99ba86ab52f13e8cf768555aa892eabf"
+    },
+    "full/hard/val": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\hard_val.tsv",
+      "source_rows": 6971,
+      "selected_before_embedding_check": 3560,
+      "exclusions": {
+        "is_combinatorial_true": 954,
+        "not_molecular_function": 2408,
+        "evaluation_augmentation": 49
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3560,
+        "proteins": 907,
+        "variants": 3236,
+        "go_terms": 779,
+        "labels": {
+          "LOF": 2637,
+          "GOF": 190,
+          "NEUTRAL": 733
+        },
+        "augmented": 0,
+        "conflicting_keys": 9,
+        "conflicting_rows": 21,
+        "same_label_duplicate_extra": 44
+      },
+      "sha256": "de63090ec30e2e451b14fd9097563c1b18137112b7acbcd0b6398a11e0cf465e"
+    },
+    "full/hard/test": {
+      "source_file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\prepared_full_all_proteins\\hard_test.tsv",
+      "source_rows": 7234,
+      "selected_before_embedding_check": 3552,
+      "exclusions": {
+        "is_combinatorial_true": 997,
+        "not_molecular_function": 2453,
+        "evaluation_augmentation": 232
+      },
+      "technical_excluded_rows": 0,
+      "technical_exclusions": {},
+      "final": {
+        "rows": 3552,
+        "proteins": 864,
+        "variants": 3169,
+        "go_terms": 775,
+        "labels": {
+          "LOF": 2672,
+          "GOF": 180,
+          "NEUTRAL": 700
+        },
+        "augmented": 0,
+        "conflicting_keys": 10,
+        "conflicting_rows": 21,
+        "same_label_duplicate_extra": 37
+      },
+      "sha256": "fb02de2620f21f9656c2be56c217f8272a00a99890d53d4ead5199f6d2bef45b"
+    },
+    "old/easy/overlap": {
+      "train/val": {
+        "protein_overlap": 1405,
+        "variant_overlap": 0
+      },
+      "train/test": {
+        "protein_overlap": 1292,
+        "variant_overlap": 0
+      },
+      "val/test": {
+        "protein_overlap": 292,
+        "variant_overlap": 0
+      }
+    },
+    "old/hard/overlap": {
+      "train/val": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      },
+      "train/test": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      },
+      "val/test": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      }
+    },
+    "full/easy/overlap": {
+      "train/val": {
+        "protein_overlap": 1711,
+        "variant_overlap": 0
+      },
+      "train/test": {
+        "protein_overlap": 1477,
+        "variant_overlap": 0
+      },
+      "val/test": {
+        "protein_overlap": 357,
+        "variant_overlap": 0
+      }
+    },
+    "full/hard/overlap": {
+      "train/val": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      },
+      "train/test": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      },
+      "val/test": {
+        "protein_overlap": 0,
+        "variant_overlap": 0
+      }
+    }
+  },
+  "common_test": {
+    "easy": {
+      "rows": 1030,
+      "proteins": 756,
+      "variants": 997,
+      "go_terms": 421,
+      "labels": {
+        "LOF": 785,
+        "GOF": 42,
+        "NEUTRAL": 203
+      },
+      "augmented": 0,
+      "conflicting_keys": 2,
+      "conflicting_rows": 4,
+      "same_label_duplicate_extra": 2
+    },
+    "hard": {
+      "rows": 399,
+      "proteins": 70,
+      "variants": 330,
+      "go_terms": 106,
+      "labels": {
+        "LOF": 284,
+        "GOF": 17,
+        "NEUTRAL": 98
+      },
+      "augmented": 0,
+      "conflicting_keys": 0,
+      "conflicting_rows": 0,
+      "same_label_duplicate_extra": 2
+    }
+  },
+  "cache_audit": {
+    "fingerprint": {
+      "global": "c36fa793df3fa45e1800c86d447bebb5aa5b874660603303430e75b9a33197d8",
+      "mut": "fae3686dc02de9f137bbd9cf7ea110a1c5d2294be257a190d2649672239cce02",
+      "window": "766694592b97eb72e79a0964ee276d068db9286351c50dfa3b1de7deddf2a136",
+      "go": "4572ad49d87865dccb80328f6fcec95ed06b103801e9fd212b940ff1dd380fe7",
+      "crop": [
+        13,
+        20
+      ],
+      "keys_sha256": "2dcc2c641a8c579a244e14a3e6c6e8349baa708738a38f6f01cb0572e5aa093e"
+    },
+    "invalid_inputs": {
+      "global:O15393_Y414A": "\"Unable to synchronously open object (object 'O15393_Y414A' doesn't exist)\"",
+      "global:O15393_Y414L": "\"Unable to synchronously open object (object 'O15393_Y414L' doesn't exist)\"",
+      "global:O15393_Y414R": "\"Unable to synchronously open object (object 'O15393_Y414R' doesn't exist)\"",
+      "global:O15393_Y414S": "\"Unable to synchronously open object (object 'O15393_Y414S' doesn't exist)\"",
+      "global:P40802": "\"Unable to synchronously open object (object 'P40802' doesn't exist)\"",
+      "global:P40802_H235A": "\"Unable to synchronously open object (object 'P40802_H235A' doesn't exist)\"",
+      "global:P40802_K232A": "\"Unable to synchronously open object (object 'P40802_K232A' doesn't exist)\"",
+      "global:P40802_K80A": "\"Unable to synchronously open object (object 'P40802_K80A' doesn't exist)\"",
+      "global:Q9I485": "\"Unable to synchronously open object (object 'Q9I485' doesn't exist)\"",
+      "global:Q9I485_C207A": "\"Unable to synchronously open object (object 'Q9I485_C207A' doesn't exist)\"",
+      "global:Q9I485_D35A": "\"Unable to synchronously open object (object 'Q9I485_D35A' doesn't exist)\"",
+      "mut:O15393_414": "\"Unable to synchronously open object (object 'O15393_414' doesn't exist)\"",
+      "mut:O15393_Y414A": "\"Unable to synchronously open object (object 'O15393_Y414A' doesn't exist)\"",
+      "mut:O15393_Y414L": "\"Unable to synchronously open object (object 'O15393_Y414L' doesn't exist)\"",
+      "mut:O15393_Y414R": "\"Unable to synchronously open object (object 'O15393_Y414R' doesn't exist)\"",
+      "mut:O15393_Y414S": "\"Unable to synchronously open object (object 'O15393_Y414S' doesn't exist)\"",
+      "mut:P40802_232": "\"Unable to synchronously open object (object 'P40802_232' doesn't exist)\"",
+      "mut:P40802_235": "\"Unable to synchronously open object (object 'P40802_235' doesn't exist)\"",
+      "mut:P40802_80": "\"Unable to synchronously open object (object 'P40802_80' doesn't exist)\"",
+      "mut:P40802_H235A": "\"Unable to synchronously open object (object 'P40802_H235A' doesn't exist)\"",
+      "mut:P40802_K232A": "\"Unable to synchronously open object (object 'P40802_K232A' doesn't exist)\"",
+      "mut:P40802_K80A": "\"Unable to synchronously open object (object 'P40802_K80A' doesn't exist)\"",
+      "mut:Q9I485_207": "\"Unable to synchronously open object (object 'Q9I485_207' doesn't exist)\"",
+      "mut:Q9I485_35": "\"Unable to synchronously open object (object 'Q9I485_35' doesn't exist)\"",
+      "mut:Q9I485_C207A": "\"Unable to synchronously open object (object 'Q9I485_C207A' doesn't exist)\"",
+      "mut:Q9I485_D35A": "\"Unable to synchronously open object (object 'Q9I485_D35A' doesn't exist)\"",
+      "window:O15393_414": "\"Unable to synchronously open object (object 'O15393_414' doesn't exist)\"",
+      "window:O15393_Y414A": "\"Unable to synchronously open object (object 'O15393_Y414A' doesn't exist)\"",
+      "window:O15393_Y414L": "\"Unable to synchronously open object (object 'O15393_Y414L' doesn't exist)\"",
+      "window:O15393_Y414R": "\"Unable to synchronously open object (object 'O15393_Y414R' doesn't exist)\"",
+      "window:O15393_Y414S": "\"Unable to synchronously open object (object 'O15393_Y414S' doesn't exist)\"",
+      "window:P40802_232": "\"Unable to synchronously open object (object 'P40802_232' doesn't exist)\"",
+      "window:P40802_235": "\"Unable to synchronously open object (object 'P40802_235' doesn't exist)\"",
+      "window:P40802_80": "\"Unable to synchronously open object (object 'P40802_80' doesn't exist)\"",
+      "window:P40802_H235A": "\"Unable to synchronously open object (object 'P40802_H235A' doesn't exist)\"",
+      "window:P40802_K232A": "\"Unable to synchronously open object (object 'P40802_K232A' doesn't exist)\"",
+      "window:P40802_K80A": "\"Unable to synchronously open object (object 'P40802_K80A' doesn't exist)\"",
+      "window:Q9I485_207": "\"Unable to synchronously open object (object 'Q9I485_207' doesn't exist)\"",
+      "window:Q9I485_35": "\"Unable to synchronously open object (object 'Q9I485_35' doesn't exist)\"",
+      "window:Q9I485_C207A": "\"Unable to synchronously open object (object 'Q9I485_C207A' doesn't exist)\"",
+      "window:Q9I485_D35A": "\"Unable to synchronously open object (object 'Q9I485_D35A' doesn't exist)\""
+    },
+    "global_keys": 42136,
+    "mutation_window_keys": 61948,
+    "padded_windows": 671,
+    "window_source": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\embeddings\\phase3_seq_phase1_window-001.h5",
+    "window_dtype": "source float16 retained; mean float32"
+  },
+  "preparation_code_sha256": "dbf5b382f01e35baf3ac69f420a2bc945073afc192cc373305905a4072f0f2ba"
+}

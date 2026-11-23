@@ -1,0 +1,24 @@
+# Generated local environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.*
+# External training inputs, predictions and model weights
+*.h5
+*.hdf5
+*.npz
+*.pt
+*.ckpt
+*.tsv
+*.zip
+/cache/
+/runtime_cache/
+/logs/
+/tmp/
+/deliverables/
+/hocaya_sunum/
+/mimari_ogrenme/
+/ontology/go-basic.json
+/ontology/go.obo

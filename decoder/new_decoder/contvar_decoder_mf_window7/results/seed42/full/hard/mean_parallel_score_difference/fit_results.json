@@ -1,0 +1,278 @@
+{
+  "condition": {
+    "number": 41,
+    "cohort": "full",
+    "family": "hard",
+    "window_mode": "mean",
+    "head": "parallel",
+    "pair_mode": "score_difference",
+    "name": "full/hard/mean_parallel_score_difference"
+  },
+  "best_epoch": 12,
+  "epochs_run": 17,
+  "parameter_count": 824467,
+  "seconds": 101.61595899995882,
+  "validation": {
+    "n": 3560,
+    "macro_f1": 0.473546664074229,
+    "accuracy": 0.6918539325842696,
+    "balanced_accuracy": 0.48270440110289586,
+    "mcc": 0.2569247120731438,
+    "confusion_matrix": [
+      [
+        2139,
+        122,
+        376
+      ],
+      [
+        97,
+        50,
+        43
+      ],
+      [
+        366,
+        93,
+        274
+      ]
+    ],
+    "lof": {
+      "precision": 0.8220599538816296,
+      "recall": 0.8111490329920364,
+      "f1": 0.8165680473372781,
+      "support": 2637,
+      "auprc": 0.8546612578343319,
+      "auroc": 0.7019633920321321
+    },
+    "gof": {
+      "precision": 0.18867924528301888,
+      "recall": 0.2631578947368421,
+      "f1": 0.21978021978021978,
+      "support": 190,
+      "auprc": 0.13493871634781707,
+      "auroc": 0.6924746212712791
+    },
+    "neutral": {
+      "precision": 0.3953823953823954,
+      "recall": 0.373806275579809,
+      "f1": 0.38429172510518933,
+      "support": 733,
+      "auprc": 0.40048317912644243,
+      "auroc": 0.6868459519416887
+    },
+    "macro_auprc": 0.4633610511028638,
+    "both_heads_positive_rate": 0.019382022471910114,
+    "score_semantics": "independent sigmoid heads plus auxiliary neutral score; not normalized class probabilities",
+    "classification_loss": 1.019080638885498,
+    "seen_in_train": {
+      "n": 3081,
+      "macro_f1": 0.47658456023519397,
+      "accuracy": 0.6987990912041545,
+      "balanced_accuracy": 0.4852256684576741,
+      "mcc": 0.2720331262340344,
+      "confusion_matrix": [
+        [
+          1864,
+          96,
+          318
+        ],
+        [
+          77,
+          39,
+          39
+        ],
+        [
+          315,
+          83,
+          250
+        ]
+      ],
+      "lof": {
+        "precision": 0.8262411347517731,
+        "recall": 0.8182616330114135,
+        "f1": 0.8222320247022497,
+        "support": 2278,
+        "auprc": 0.8618139224956314,
+        "auroc": 0.7163468424488064
+      },
+      "gof": {
+        "precision": 0.17889908256880735,
+        "recall": 0.25161290322580643,
+        "f1": 0.20911528150134048,
+        "support": 155,
+        "auprc": 0.13266342665853437,
+        "auroc": 0.7147950521464953
+      },
+      "neutral": {
+        "precision": 0.41186161449752884,
+        "recall": 0.38580246913580246,
+        "f1": 0.398406374501992,
+        "support": 648,
+        "auprc": 0.42850235289064464,
+        "auroc": 0.6982038381716419
+      },
+      "macro_auprc": 0.47432656734827017,
+      "both_heads_positive_rate": 0.018175916910094125,
+      "score_semantics": "independent sigmoid heads plus auxiliary neutral score; not normalized class probabilities",
+      "classification_loss": 0.9516823291778564
+    },
+    "not_seen_in_train": {
+      "n": 479,
+      "macro_f1": 0.4430454270948085,
+      "accuracy": 0.6471816283924844,
+      "balanced_accuracy": 0.4542184561847023,
+      "mcc": 0.15954136408095385,
+      "confusion_matrix": [
+        [
+          275,
+          26,
+          58
+        ],
+        [
+          20,
+          11,
+          4
+        ],
+        [
+          51,
+          10,
+          24
+        ]
+      ],
+      "lof": {
+        "precision": 0.7947976878612717,
+        "recall": 0.766016713091922,
+        "f1": 0.7801418439716312,
+        "support": 359,
+        "auprc": 0.8109721915637853,
+        "auroc": 0.6080315691736304
+      },
+      "gof": {
+        "precision": 0.23404255319148937,
+        "recall": 0.3142857142857143,
+        "f1": 0.2682926829268293,
+        "support": 35,
+        "auprc": 0.1644788107481353,
+        "auroc": 0.5867438867438869
+      },
+      "neutral": {
+        "precision": 0.27906976744186046,
+        "recall": 0.2823529411764706,
+        "f1": 0.2807017543859649,
+        "support": 85,
+        "auprc": 0.25102929349794256,
+        "auroc": 0.6033592117049866
+      },
+      "macro_auprc": 0.40882676526995443,
+      "both_heads_positive_rate": 0.027139874739039668,
+      "score_semantics": "independent sigmoid heads plus auxiliary neutral score; not normalized class probabilities",
+      "classification_loss": 1.4525961875915527
+    },
+    "multiple_labels_for_input": {
+      "n": 21,
+      "macro_f1": 0.298035298035298,
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.4053030303030303,
+      "mcc": 0.012858612496840994,
+      "confusion_matrix": [
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          8,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "lof": {
+        "precision": 0.35714285714285715,
+        "recall": 0.625,
+        "f1": 0.45454545454545453,
+        "support": 8,
+        "auprc": 0.3962301587301587,
+        "auroc": 0.5048076923076923
+      },
+      "gof": {
+        "precision": 0.5,
+        "recall": 0.09090909090909091,
+        "f1": 0.15384615384615385,
+        "support": 11,
+        "auprc": 0.5233578224008846,
+        "auroc": 0.44999999999999996
+      },
+      "neutral": {
+        "precision": 0.2,
+        "recall": 0.5,
+        "f1": 0.2857142857142857,
+        "support": 2,
+        "auprc": 0.3611111111111111,
+        "auroc": 0.8157894736842105
+      },
+      "macro_auprc": 0.4268996974140515,
+      "both_heads_positive_rate": 0.0,
+      "score_semantics": "independent sigmoid heads plus auxiliary neutral score; not normalized class probabilities",
+      "classification_loss": 4.860881805419922
+    },
+    "not_multiple_labels_for_input": {
+      "n": 3539,
+      "macro_f1": 0.4748640533778934,
+      "accuracy": 0.6939813506640294,
+      "balanced_accuracy": 0.48630650341440873,
+      "mcc": 0.259087208987213,
+      "confusion_matrix": [
+        [
+          2134,
+          121,
+          374
+        ],
+        [
+          89,
+          49,
+          41
+        ],
+        [
+          365,
+          93,
+          273
+        ]
+      ],
+      "lof": {
+        "precision": 0.8245749613601236,
+        "recall": 0.8117154811715481,
+        "f1": 0.818094690435116,
+        "support": 2629,
+        "auprc": 0.8570663204542379,
+        "auroc": 0.704378466721563
+      },
+      "gof": {
+        "precision": 0.18631178707224336,
+        "recall": 0.2737430167597765,
+        "f1": 0.22171945701357465,
+        "support": 179,
+        "auprc": 0.13456775583382302,
+        "auroc": 0.701818967810588
+      },
+      "neutral": {
+        "precision": 0.39680232558139533,
+        "recall": 0.3734610123119015,
+        "f1": 0.38477801268498946,
+        "support": 731,
+        "auprc": 0.40094104682249637,
+        "auroc": 0.6863919191210572
+      },
+      "macro_auprc": 0.4641917077035191,
+      "both_heads_positive_rate": 0.01949703306018649,
+      "score_semantics": "independent sigmoid heads plus auxiliary neutral score; not normalized class probabilities",
+      "classification_loss": 0.9962838888168335
+    }
+  },
+  "completed": "2026-11-18T02:09:34.350080+00:00",
+  "training_rows": 31461,
+  "validation_rows": 3560
+}

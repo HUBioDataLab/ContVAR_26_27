@@ -1,0 +1,75 @@
+{
+  "condition": {
+    "number": 42,
+    "cohort": "full",
+    "family": "hard",
+    "window_mode": "mean",
+    "head": "multiclass",
+    "pair_mode": "score_difference",
+    "name": "full/hard/mean_multiclass_score_difference"
+  },
+  "settings": {
+    "seed": 42,
+    "epochs": 20,
+    "patience": 5,
+    "batch_size": 128,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "width": 128,
+    "attention_heads": 4,
+    "dropout": 0.1,
+    "gradient_clip": 5.0,
+    "class_balancing": false,
+    "reverse_penalty": false
+  },
+  "provenance": {
+    "prepared_manifest_sha256": "31186357be4021ff616e60b9946711f516d036146764dd349c4e042d52aaa5df",
+    "source_code_sha256": {
+      "model.py": "12ce299a9e848a9282588f4cf5575cd383a6af9229840ec2e9ea405e10f7ba09",
+      "data.py": "c5522b91699cdc7cf5d3676b0e9a3ef2224060dce0d33089dd11e0f2b0cd667e",
+      "train.py": "9f990bdd2dfc7f66745106697a8e0b77dd845d5b6d42b0b68040011939c2f3d9",
+      "suite.py": "aaefac609e1480f69c2ac04bdac05a385dd88b2759fa206d81b1981d2fd99c69",
+      "util.py": "cfc141a76adff6f479e665177494ba442bb1641374dc2b95c7454922602ff92c",
+      "go_embeddings.py": "d5d362d60a3d7e5f29fa7e2a1b339d0320965984e248f843737ecf2e16c6cc3f"
+    },
+    "offline_runner_sha256": "87ab63a37a7ef8b9701235e9bf8c5dfd019f29f4cea25f5ae9be55eb57ae1883",
+    "feature_cache_sha256": "724c49574eebf959e161c20e4f801544004e5c549800fa06c3b0271ec029379e",
+    "source_feature_sha256": {
+      "global": "c36fa793df3fa45e1800c86d447bebb5aa5b874660603303430e75b9a33197d8",
+      "mut": "fae3686dc02de9f137bbd9cf7ea110a1c5d2294be257a190d2649672239cce02",
+      "window": "766694592b97eb72e79a0964ee276d068db9286351c50dfa3b1de7deddf2a136",
+      "go": "4572ad49d87865dccb80328f6fcec95ed06b103801e9fd212b940ff1dd380fe7"
+    },
+    "source_cohorts": {
+      "old": "prepared_old_subset_without_1499_proteins",
+      "full": "prepared_full_all_proteins"
+    },
+    "ontology": {
+      "graph_id": "http://purl.obolibrary.org/obo/go.owl",
+      "version": "http://purl.obolibrary.org/obo/go/releases/2026-07-26/go.owl",
+      "sha256": "531d85b2e7a6d4b91290093b487f228994123cec3f45a50136cad2c4b91862ac"
+    },
+    "torch_version": "2.11.0+cu128",
+    "numpy_version": "2.5.5",
+    "gpu": "NVIDIA GeForce RTX 4070 Ti"
+  },
+  "labels": [
+    "LOF",
+    "GOF",
+    "NEUTRAL"
+  ],
+  "encoder_frozen": true,
+  "anc2vec_frozen": true,
+  "reverse_penalty": false,
+  "classification_only": true,
+  "class_balancing": false,
+  "training_rows": 31461,
+  "validation_rows": 3560,
+  "training_class_counts": [
+    21011,
+    1737,
+    8713
+  ],
+  "checkpoint_selection": "validation macro-F1 only; earliest epoch on ties",
+  "parallel_decision": "threshold .5; strongest positive head; neither -> NEUTRAL"
+}

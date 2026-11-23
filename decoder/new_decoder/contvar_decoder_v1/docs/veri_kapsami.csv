@@ -1,0 +1,7 @@
+family,split,raw,ready,retained_fraction,excluded_combinatorial,excluded_eval_augmentation,excluded_missing_sequence,excluded_position_over_1022,excluded_missing_or_invalid_embeddings,augmented_retained,multiple_label_rows
+easy,train,60137,41720,0.6937492724944709,8018,0,4983,2272,3130,1731,146
+easy,val,6840,4677,0.6837719298245614,1188,40,638,234,61,0,28
+easy,test,5309,4515,0.8504426445658316,77,30,364,245,78,0,6
+hard,train,59697,41872,0.7014087810107711,7655,0,4962,2268,2925,1408,141
+hard,val,6978,4973,0.7126683863571224,955,208,542,222,77,0,18
+hard,test,7234,4915,0.6794304672380426,997,410,522,324,66,0,37

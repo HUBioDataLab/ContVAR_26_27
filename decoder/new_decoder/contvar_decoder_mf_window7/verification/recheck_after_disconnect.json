@@ -1,0 +1,4116 @@
+{
+  "created": "2026-11-18T02:54:27.096Z",
+  "fresh_training_started": false,
+  "fresh_forward_inference": true,
+  "fresh_forward_blocker": null,
+  "sources": [
+    {
+      "file": "prepared/manifest.json",
+      "sha256": "31186357be4021ff616e60b9946711f516d036146764dd349c4e042d52aaa5df",
+      "passed": true
+    },
+    {
+      "file": "offline_run.py",
+      "sha256": "87ab63a37a7ef8b9701235e9bf8c5dfd019f29f4cea25f5ae9be55eb57ae1883",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/report.py",
+      "sha256": "bdbac47059907aaf3fdd7b93dd5d1c7453eced1037ccfc4d5713957b5d930d81",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/summary.json",
+      "sha256": "879d1581a1e700597e8eb0fae5c303db77c1a65b454517e8e53fe35d3ffb65b5",
+      "passed": true
+    },
+    {
+      "file": "ontology/go-basic.json",
+      "sha256": "531d85b2e7a6d4b91290093b487f228994123cec3f45a50136cad2c4b91862ac",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/model.py",
+      "sha256": "12ce299a9e848a9282588f4cf5575cd383a6af9229840ec2e9ea405e10f7ba09",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/model.py",
+      "sha256": "12ce299a9e848a9282588f4cf5575cd383a6af9229840ec2e9ea405e10f7ba09",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/data.py",
+      "sha256": "c5522b91699cdc7cf5d3676b0e9a3ef2224060dce0d33089dd11e0f2b0cd667e",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/data.py",
+      "sha256": "c5522b91699cdc7cf5d3676b0e9a3ef2224060dce0d33089dd11e0f2b0cd667e",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/train.py",
+      "sha256": "9f990bdd2dfc7f66745106697a8e0b77dd845d5b6d42b0b68040011939c2f3d9",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/train.py",
+      "sha256": "9f990bdd2dfc7f66745106697a8e0b77dd845d5b6d42b0b68040011939c2f3d9",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/suite.py",
+      "sha256": "aaefac609e1480f69c2ac04bdac05a385dd88b2759fa206d81b1981d2fd99c69",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/suite.py",
+      "sha256": "aaefac609e1480f69c2ac04bdac05a385dd88b2759fa206d81b1981d2fd99c69",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/util.py",
+      "sha256": "cfc141a76adff6f479e665177494ba442bb1641374dc2b95c7454922602ff92c",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/util.py",
+      "sha256": "cfc141a76adff6f479e665177494ba442bb1641374dc2b95c7454922602ff92c",
+      "passed": true
+    },
+    {
+      "file": "contvar_mf/go_embeddings.py",
+      "sha256": "d5d362d60a3d7e5f29fa7e2a1b339d0320965984e248f843737ecf2e16c6cc3f",
+      "passed": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/go_embeddings.py",
+      "sha256": "d5d362d60a3d7e5f29fa7e2a1b339d0320965984e248f843737ecf2e16c6cc3f",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\easy_train.tsv",
+      "sha256": "1b27144700c2bfa6fef33b2b65a304a1155ad15dcef84a2b77c48609bbc490e3",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\easy_val.tsv",
+      "sha256": "6c3bcbbabab1d60d5342c2fdf3e9fcd7acc309a7f5b7fa3412bed0226818db6c",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\easy_test.tsv",
+      "sha256": "bac1f20bf2255498dfe4f6dfec78f96c740675bea47d41f0e4a0d7df76465928",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\hard_train.tsv",
+      "sha256": "b80504ec1462071403cdb814b47baf2805d9fab7cf4c86d139d48c546dc5697b",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\hard_val.tsv",
+      "sha256": "91468ccd6d347ca812c69308c769ad251b31e6b00f38c20d29b98b3638dbd10d",
+      "passed": true
+    },
+    {
+      "file": "prepared_old_subset_without_1499_proteins\\hard_test.tsv",
+      "sha256": "9f8e7fa474827c1a2e70d84a6424434dcba1c5214775c8ce767aca73fc31e0a9",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\easy_train.tsv",
+      "sha256": "755309a1eb4f4b707de386669c632d6b1e27b48b218f69a7ba7a139fd1dc5fb2",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\easy_val.tsv",
+      "sha256": "0b9f0a34bac50cb4d8c0b71d85733168dcdcbac31774c4986a8596b143090ad8",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\easy_test.tsv",
+      "sha256": "f7fa0b50f1b07e0dfcc820d8f3c44c9796838c95982960fb82f73250c872327e",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\hard_train.tsv",
+      "sha256": "9a2c8d125ec0c2e6fd4390cde6102ea1ef24a23f8445ad5da0a9ffe4bb5fe95f",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\hard_val.tsv",
+      "sha256": "cc962a339f29c4e85322198bcc73ec74a53e7866212a2a806302ae957e77f201",
+      "passed": true
+    },
+    {
+      "file": "prepared_full_all_proteins\\hard_test.tsv",
+      "sha256": "16b6d61850c5c6213c652e25926f04a4c8f2b65b3552ff0f09065dcbffe98a41",
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\contvar_decoder_mf_window7\\prepared\\features_window7.h5",
+      "sha256": "724c49574eebf959e161c20e4f801544004e5c549800fa06c3b0271ec029379e",
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\embeddings\\phase3_seq_phase1_global.h5",
+      "sha256": "c36fa793df3fa45e1800c86d447bebb5aa5b874660603303430e75b9a33197d8",
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\embeddings\\go_terms_embeddings_anc2vec.npz",
+      "sha256": "4572ad49d87865dccb80328f6fcec95ed06b103801e9fd212b940ff1dd380fe7",
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\embeddings\\phase3_seq_phase1_local.h5",
+      "sha256": "fae3686dc02de9f137bbd9cf7ea110a1c5d2294be257a190d2649672239cce02",
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\iyigi\\OneDrive\\Masaüstü\\Codex_Devir_14Kasim2026\\New_Decoder_Data_with_local_Context\\embeddings\\phase3_seq_phase1_window-001.h5",
+      "sha256": "766694592b97eb72e79a0964ee276d068db9286351c50dfa3b1de7deddf2a136",
+      "passed": true
+    }
+  ],
+  "prepared": [
+    {
+      "cohort": "old",
+      "family": "easy",
+      "split": "train",
+      "rows": 23776,
+      "source_rows": 46953,
+      "technical_exclusions": 9,
+      "filters_verified": true
+    },
+    {
+      "cohort": "old",
+      "family": "easy",
+      "split": "val",
+      "rows": 2653,
+      "source_rows": 5819,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "old",
+      "family": "easy",
+      "split": "test",
+      "rows": 2974,
+      "source_rows": 4538,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "old",
+      "family": "hard",
+      "split": "train",
+      "rows": 23921,
+      "source_rows": 47098,
+      "technical_exclusions": 9,
+      "filters_verified": true
+    },
+    {
+      "cohort": "old",
+      "family": "hard",
+      "split": "val",
+      "rows": 3003,
+      "source_rows": 5825,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "old",
+      "family": "hard",
+      "split": "test",
+      "rows": 3065,
+      "source_rows": 5864,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "easy",
+      "split": "train",
+      "rows": 31576,
+      "source_rows": 60104,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "easy",
+      "split": "val",
+      "rows": 3250,
+      "source_rows": 6837,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "easy",
+      "split": "test",
+      "rows": 3330,
+      "source_rows": 5308,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "hard",
+      "split": "train",
+      "rows": 31461,
+      "source_rows": 59667,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "hard",
+      "split": "val",
+      "rows": 3560,
+      "source_rows": 6971,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    },
+    {
+      "cohort": "full",
+      "family": "hard",
+      "split": "test",
+      "rows": 3552,
+      "source_rows": 7234,
+      "technical_exclusions": 0,
+      "filters_verified": true
+    }
+  ],
+  "models": [
+    {
+      "name": "old/easy/none_parallel_score_difference",
+      "epochs": 19,
+      "best_epoch": 14,
+      "checkpoint_sha256": "1bc237c2accb790352e579493e82ee1e137b806c4391694a67e2e0eb57490d87",
+      "tensor_fingerprint": "cc2a5f34f0cdb761535b0c70df0a713302ffa186a027af3cf552233c0f79f4bd",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657811,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/none_multiclass_score_difference",
+      "epochs": 20,
+      "best_epoch": 16,
+      "checkpoint_sha256": "8a8a4cf24ae947de431358f42e3f128712c4b08c96793a75e28455e8989dd287",
+      "tensor_fingerprint": "0bb7040758f6237ac3ab74b775886f1f76d895433b062441192a8b731f5effa2",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657683,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/none_parallel_joint",
+      "epochs": 15,
+      "best_epoch": 10,
+      "checkpoint_sha256": "a56d995eb25198702fa73a7df6eba268876abd9b5d06e06ae2cd8de5e446a0fe",
+      "tensor_fingerprint": "1ee6704da52977ae575c87a997b1c892e20a3822b32007c5a084d66545ab1c8e",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674194,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/none_multiclass_joint",
+      "epochs": 8,
+      "best_epoch": 3,
+      "checkpoint_sha256": "74fbb2aae2583a6bfed55409e54cfb8e56e91e1c4f7e37135bf97bdd512cc70e",
+      "tensor_fingerprint": "d9131e5d0eded107c7d8b0bea411c0108a012371bd9b9856fe9c30524bd4e412",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674323,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/none_parallel_score_difference",
+      "epochs": 8,
+      "best_epoch": 3,
+      "checkpoint_sha256": "f1e2fd08eec2507b4bc56f1599dd02f43f0e77ab421cc7e9e43078ff7ebb1f8d",
+      "tensor_fingerprint": "e090ed4f0b4b180b6df7ede0c5f81c1473013b0a257cbf357ac77a118bc84c1a",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657811,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/none_multiclass_score_difference",
+      "epochs": 12,
+      "best_epoch": 7,
+      "checkpoint_sha256": "7a323d5615b39d56461de24ffff842bb192147da3ed1757be081943f5e17767a",
+      "tensor_fingerprint": "3d31930eda7d56c20184b84c3f415a1a3e2d69f6078882278c32e346976d49b6",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657683,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/none_parallel_joint",
+      "epochs": 11,
+      "best_epoch": 6,
+      "checkpoint_sha256": "bff27dc86143765d1cced0e04c56b7352641a4cef8eb27fe2e145abc2d479dd9",
+      "tensor_fingerprint": "31451bdd4e0b046a044c68ce659e0da41210b04ab1ae032a1c2c1b2a46b1c079",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674194,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/none_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "9742e8a365722fe05343800584b937b7bf480bc68f724398fa348fbfec19fecb",
+      "tensor_fingerprint": "e0de7f4156b93b2dbf70d1bb511e846e9ac0964b5e333119dbb4cb4d343fb262",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674323,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/mean_parallel_score_difference",
+      "epochs": 20,
+      "best_epoch": 16,
+      "checkpoint_sha256": "dd84140301dcb612a4979781f72b8ece0837407191d8da7128dc3fbf74aceffe",
+      "tensor_fingerprint": "b093afc54b58c202e475276de67d688bf55058c82f1bdfcb383612e95d1b5d00",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824467,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/mean_multiclass_score_difference",
+      "epochs": 17,
+      "best_epoch": 12,
+      "checkpoint_sha256": "d883701ce4712ab96a6aa62b3a140821f2b18463365611bc20734030af29bbbf",
+      "tensor_fingerprint": "fdcd733e3e7089bc69f0aa42c49d64074de7fc496f1b54aac5cde48d625ec0de",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824339,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/mean_parallel_joint",
+      "epochs": 18,
+      "best_epoch": 13,
+      "checkpoint_sha256": "ce85465fcad2b2f84e143497b3ac200babd55668818c876564497809ec20b00f",
+      "tensor_fingerprint": "d22ef9d4fe8515aaa89194a9bcd56ab1445304971af4f25c7838842358814c80",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840850,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/mean_multiclass_joint",
+      "epochs": 12,
+      "best_epoch": 7,
+      "checkpoint_sha256": "28acd5f39c7b6d6e7a5c3f8ec83ea93d9bfb2ba7b0a44114800d2465445ba97d",
+      "tensor_fingerprint": "38d8c89cf79ba9b5919e4698016e2c95b7134974079a4b0320930da757b07da7",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840979,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/pair_mean_parallel_joint",
+      "epochs": 13,
+      "best_epoch": 8,
+      "checkpoint_sha256": "645c9528dd97f17b9ee1125d72872a48d915564c9b5d5c4a3403597d38839598",
+      "tensor_fingerprint": "63f509f1fb74e7fc593702be98e0495af0c6838d23e75ae2e368033c8d1b80d4",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/pair_mean_multiclass_joint",
+      "epochs": 11,
+      "best_epoch": 6,
+      "checkpoint_sha256": "42f37419d0197922c1569ca5319566d93ed02548832880cc45cb4126464be75f",
+      "tensor_fingerprint": "1f376aaa3713e46b8a9e7b5f03ef44a90fb608944c0e481d2b9ad67992f356b0",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/esim_parallel_joint",
+      "epochs": 13,
+      "best_epoch": 8,
+      "checkpoint_sha256": "dbdc537cd8adf909e8291fc7975cd68a4665dbf4cfcf2a8a78b438077aaf0a67",
+      "tensor_fingerprint": "bb826e8ed5278535f4ac83cc5e12e57af828940f228659b8ffe1180acb6c912d",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/easy/esim_multiclass_joint",
+      "epochs": 8,
+      "best_epoch": 3,
+      "checkpoint_sha256": "853b0e650ca9402d4ab666b3d19860c353882bff69407554d9a639ccdbb6ad38",
+      "tensor_fingerprint": "051ce4e336d21244643313453bccaa1033d720fbbe777ae86463276bbcd90761",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/mean_parallel_score_difference",
+      "epochs": 10,
+      "best_epoch": 5,
+      "checkpoint_sha256": "de9a0152e22de8b9e0664c9fae1bfad93942670e75a149117b4066baad3d22d1",
+      "tensor_fingerprint": "713e08b046ddf9a4b39dbaef49f44a6d00757e86fe216079e3650710aaaaf63a",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824467,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/mean_multiclass_score_difference",
+      "epochs": 20,
+      "best_epoch": 15,
+      "checkpoint_sha256": "1e180073579cfb641f00025964a8e4b2b1fbe9352a006bb0b3be05b5f0a3d330",
+      "tensor_fingerprint": "cda6cf6255eed470a769458beaf9fdf913fbcb2aa5ea5266760ecf018c365014",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824339,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/mean_parallel_joint",
+      "epochs": 14,
+      "best_epoch": 9,
+      "checkpoint_sha256": "ca7d6ddfdf592d4ce3ff86dd27659bd03f52174e8604f90806f3b6c0433e9400",
+      "tensor_fingerprint": "a5e54ea47c3b290ea12e34cf6e8c38c087f0407037a5c9f62d8c0c7f0ae99f0f",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840850,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/mean_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "1b77819a1eb9c36cc7c0596be4c9b950d7887fa69801e771b51ea8925d5425e3",
+      "tensor_fingerprint": "6ef641cd9911fded269954cae4d714c885115390cac3c5d8d45ebbc0b031c5a9",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840979,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/pair_mean_parallel_joint",
+      "epochs": 9,
+      "best_epoch": 4,
+      "checkpoint_sha256": "1f37e30c237c8d546f675f038bc4fc05887b16e762d32da0bd1c7debfd50e26c",
+      "tensor_fingerprint": "7c5aa76fecf9d7cc42b2ca1619b3067df5f58e613ff1b3d097e4265f9c13b9f6",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/pair_mean_multiclass_joint",
+      "epochs": 10,
+      "best_epoch": 5,
+      "checkpoint_sha256": "9754070c27a2ebdf1d2c8d31237e4a76e5ae981da30c633e01109865662c1338",
+      "tensor_fingerprint": "4200059f0aef52fb505c1a64436248550f26e10971e534122b9a2baf1c5b73b2",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/esim_parallel_joint",
+      "epochs": 11,
+      "best_epoch": 6,
+      "checkpoint_sha256": "1584c0bbd7657f586ebbdbb3437ba0b180bcb28cd3ac6dad0cb67379ca37d622",
+      "tensor_fingerprint": "3ab0c845b81081305e4256359c4eece5144cca7b2c310c6c6e50a6f93cc16497",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "old/hard/esim_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "33aafafd8cc2d65cf1e5848a2ec4a8c87366956fc81214c998f9f01ea991d5ea",
+      "tensor_fingerprint": "8e686d987547ddbb07152598d46c882d1fb9794ea7abeddb2faba3db5e7865c7",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/none_parallel_score_difference",
+      "epochs": 20,
+      "best_epoch": 16,
+      "checkpoint_sha256": "3c450cde3351406c90353dd544f8779571c09d6c7a7f98ff957ddd45aa3e7b35",
+      "tensor_fingerprint": "0c42dbdb99a237f682e8ac5682b52dee4f1601bde51858226d6fd1820f730bb0",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657811,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/none_multiclass_score_difference",
+      "epochs": 14,
+      "best_epoch": 9,
+      "checkpoint_sha256": "897299e8df19d5928006bfac7055d1f2e921d90c25c0e78be62eeed7d14c721a",
+      "tensor_fingerprint": "ccd9ff9c96ae58d8d20446ff0d9c12d8184565edc085f64d963747fda6a782d2",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657683,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/none_parallel_joint",
+      "epochs": 11,
+      "best_epoch": 6,
+      "checkpoint_sha256": "a29ba669c6d16f71db47acb4e5f3b8acbccf8d98b5892510b51fcd8cb4879d36",
+      "tensor_fingerprint": "f9f763f98a6b7b273fa3eb285b45030c7aa2ce1868251b5ac4b8aa7dffaa201f",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674194,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/none_multiclass_joint",
+      "epochs": 15,
+      "best_epoch": 10,
+      "checkpoint_sha256": "921b51c96f4a62c6d00d3479139d5557aba75fb3d717bc2e4c6fd589eff3d877",
+      "tensor_fingerprint": "9773c7e9e89191bbbd65e1583b8e2031c36e07fe7c120e4a8ec8e37ccadcf491",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674323,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/none_parallel_score_difference",
+      "epochs": 12,
+      "best_epoch": 7,
+      "checkpoint_sha256": "ca36b0187aded848ea5b930b913df82befeeaaf930c0b5d0e89a22c65e364248",
+      "tensor_fingerprint": "6dd5bf3c15cd331bb9b39c1465b50acca0b0608d0d419b457b58e454d992cdea",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657811,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/none_multiclass_score_difference",
+      "epochs": 10,
+      "best_epoch": 5,
+      "checkpoint_sha256": "39ceae00716876497449bd302a8e71cf9e5a4b38349289079e55047d82b9a00a",
+      "tensor_fingerprint": "015d79864017c8a581a41943e589a153e5856348a14bcd4f9c1fd897d6aaa18f",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 657683,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/none_parallel_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "597f3ed88241ac30586a6d40e531aedbf51491aa2a25557a368aa75096166bf0",
+      "tensor_fingerprint": "840fed5b9242f33cdbea5099677e7a67c9bdbc6521201b9478edbbe502e9f084",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674194,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/none_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "707ca1eac583ae074bcf402c0af65197c42e3ddea2ab861588972bfa68d01a59",
+      "tensor_fingerprint": "2e639f81233ac2f86a33d88401fa478149ce3f6d5395cbd1ac28bcf1f68f0b0b",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 674323,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/mean_parallel_score_difference",
+      "epochs": 18,
+      "best_epoch": 13,
+      "checkpoint_sha256": "d7e42b26c483ac6ef41599529531a72f4977b728fffaae1cf0232914411c74ab",
+      "tensor_fingerprint": "95e82d9715b9797baa41530be22d96f8ae3a0aa0a3f7a7ab93e687dc8e3a2821",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824467,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/mean_multiclass_score_difference",
+      "epochs": 20,
+      "best_epoch": 18,
+      "checkpoint_sha256": "e065ede40ae968d2955db934d6b02cccec2a1518c4a212e9074dd79585f96b9e",
+      "tensor_fingerprint": "43e8fb832b6ddf4af23b95ed3d26dd397fd26bcaa6e489bbbec3ae955ba57527",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824339,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/mean_parallel_joint",
+      "epochs": 13,
+      "best_epoch": 8,
+      "checkpoint_sha256": "446d17d67e722f5f3330fa9fc27888a9ea5bc6742f915624be6480e5d44dbad3",
+      "tensor_fingerprint": "198a6f32e427134b8656415c70f7487a2b170a757090b96363e3dfbe1063eb42",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840850,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/mean_multiclass_joint",
+      "epochs": 9,
+      "best_epoch": 4,
+      "checkpoint_sha256": "0518f2a40f557de9027907e401e082c6579c1404b7dd8c1bce50843c5fe3cba8",
+      "tensor_fingerprint": "045babef69597f54aa73d5951823ace8c0002c164f41aa21fe4a2a2dc5092acd",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840979,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/pair_mean_parallel_joint",
+      "epochs": 19,
+      "best_epoch": 14,
+      "checkpoint_sha256": "0e5fe0d7b795478de24e9c46fa309e102da36a1ca05f2016e2f97c4e84182aea",
+      "tensor_fingerprint": "71d9eeb7760f6c749d0340831d8e1191bd939a6ad9c451d62febf63d64633e24",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/pair_mean_multiclass_joint",
+      "epochs": 10,
+      "best_epoch": 5,
+      "checkpoint_sha256": "d30e176a3534089e57ded2c4ba2079692fcb88915ce5007a4771bc43cca42972",
+      "tensor_fingerprint": "6d1614e58888325b88e204221d6661c4b465fdcc42dcb88a328fec9d7c5c1add",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/esim_parallel_joint",
+      "epochs": 9,
+      "best_epoch": 4,
+      "checkpoint_sha256": "a5666a95852fbb8ff1b7357083ac4ce3ecc5d2808ad599a46f4d40c3c1a3b9eb",
+      "tensor_fingerprint": "dcd8ca5d6ce62e6647674c3f36ec31dd54a2d304540ebbd5aafc003152fe49b5",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/easy/esim_multiclass_joint",
+      "epochs": 13,
+      "best_epoch": 8,
+      "checkpoint_sha256": "be6c56e4714b6411e0cbbd007546d601caf3b3d6841fa566c0c66c2a8ffa4422",
+      "tensor_fingerprint": "e073f3a305ecd9e59d16fd95b06d5047f86390c0fb53ad359827d2cfe88f5c0f",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/mean_parallel_score_difference",
+      "epochs": 17,
+      "best_epoch": 12,
+      "checkpoint_sha256": "64fcc91ae3f78ab6145dfae02367d00fc96441f7e90fc9a605270ae7ccccec6a",
+      "tensor_fingerprint": "9815b91081aa2073807ceecae7bfa1e24ab31f125df62ba4b3a0262a585a51c3",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824467,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/mean_multiclass_score_difference",
+      "epochs": 11,
+      "best_epoch": 6,
+      "checkpoint_sha256": "13e654b4b11fefeca4417e40e9e34d59d6bd8b9219e95a715c813404449b07bd",
+      "tensor_fingerprint": "e879176d69222dac70cd573f09b2b1b18f190f4eb8ed7aa79e96a4f2dc42c1dd",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 824339,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/mean_parallel_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "f0ffb5da98441be614693ebf699e53badea31b8f69b2fa8601b2f1613d4cc4b8",
+      "tensor_fingerprint": "2cbaaba271a6058bea673c8a63ef372ba4b6f362b4500e0c8c7051d7cc985260",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840850,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/mean_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "274220f6006dd62c4aa989bae4a7c7e44aab7ca217cf3c3331e0403047abc59c",
+      "tensor_fingerprint": "f87d9e766d6041d952cb83a0e76ea77ce00410aee857d27491e159fb9bec2672",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 840979,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/pair_mean_parallel_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "1f00120884f75af7acdb0929d8be39f2be6d773a15a2c6c42c93835a6f96e686",
+      "tensor_fingerprint": "8322542427fa6954cfca2d65a0182ab4b0e4ac40c7758953e47d585d688fb876",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/pair_mean_multiclass_joint",
+      "epochs": 9,
+      "best_epoch": 4,
+      "checkpoint_sha256": "a89e331508d627e94ed78dfa736377a612c3b10ec648f58c65d077cd3a12c3ff",
+      "tensor_fingerprint": "c2a1dcfb55df05d4a6c50bf172f7fb2a509489a9213cb1e781fcaeb4146c8e54",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/esim_parallel_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "73cf44af8b6a2bf47ec78213b5826aaf7ff2b638fd663860db45f4563ede3ec1",
+      "tensor_fingerprint": "5242c9afd341c3fa2ee8e02f01a4994e6f8d0d677c88406affa8018bc0e63d7c",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204498,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    },
+    {
+      "name": "full/hard/esim_multiclass_joint",
+      "epochs": 7,
+      "best_epoch": 2,
+      "checkpoint_sha256": "149074e0263cfb532bd25eb06eaa4f11d619b25adc85fd67e95856956d5043ef",
+      "tensor_fingerprint": "6efc9c1b034a76a9493d43120d2f14920503569d29ff28366303baa96908b6c3",
+      "format": "contvar_mf_window7_v1",
+      "parameters": 1204627,
+      "training_complete": true,
+      "distinct_from_legacy": true
+    }
+  ],
+  "predictions": [
+    {
+      "name": "old/easy/none_parallel_score_difference",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5919408094555937
+    },
+    {
+      "name": "old/easy/none_parallel_score_difference",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5246519528592023
+    },
+    {
+      "name": "old/easy/none_multiclass_score_difference",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6069412090244738
+    },
+    {
+      "name": "old/easy/none_multiclass_score_difference",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5374770818781961
+    },
+    {
+      "name": "old/easy/none_parallel_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6639510253335742
+    },
+    {
+      "name": "old/easy/none_parallel_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5726002915903643
+    },
+    {
+      "name": "old/easy/none_multiclass_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6723145919277383
+    },
+    {
+      "name": "old/easy/none_multiclass_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5449989024523013
+    },
+    {
+      "name": "old/hard/none_parallel_score_difference",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.47166352765623004
+    },
+    {
+      "name": "old/hard/none_parallel_score_difference",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4381666831059923
+    },
+    {
+      "name": "old/hard/none_multiclass_score_difference",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4940203172474058
+    },
+    {
+      "name": "old/hard/none_multiclass_score_difference",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.45108643089257733
+    },
+    {
+      "name": "old/hard/none_parallel_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5264899679689183
+    },
+    {
+      "name": "old/hard/none_parallel_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.46120999032089033
+    },
+    {
+      "name": "old/hard/none_multiclass_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.535871176869694
+    },
+    {
+      "name": "old/hard/none_multiclass_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.48895588966921383
+    },
+    {
+      "name": "old/easy/mean_parallel_score_difference",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5848756824366581
+    },
+    {
+      "name": "old/easy/mean_parallel_score_difference",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5102558174815182
+    },
+    {
+      "name": "old/easy/mean_multiclass_score_difference",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5970936578531515
+    },
+    {
+      "name": "old/easy/mean_multiclass_score_difference",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5293782776381432
+    },
+    {
+      "name": "old/easy/mean_parallel_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6786955552588552
+    },
+    {
+      "name": "old/easy/mean_parallel_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5661855932750791
+    },
+    {
+      "name": "old/easy/mean_multiclass_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6840870211570941
+    },
+    {
+      "name": "old/easy/mean_multiclass_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6075434545851229
+    },
+    {
+      "name": "old/easy/pair_mean_parallel_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6766803551861836
+    },
+    {
+      "name": "old/easy/pair_mean_parallel_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5896637894831643
+    },
+    {
+      "name": "old/easy/pair_mean_multiclass_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6916912025135321
+    },
+    {
+      "name": "old/easy/pair_mean_multiclass_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5752685175911129
+    },
+    {
+      "name": "old/easy/esim_parallel_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6760364926619005
+    },
+    {
+      "name": "old/easy/esim_parallel_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5955901823882094
+    },
+    {
+      "name": "old/easy/esim_multiclass_joint",
+      "split": "val",
+      "rows": 2653,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6840770073653166
+    },
+    {
+      "name": "old/easy/esim_multiclass_joint",
+      "split": "test",
+      "rows": 2974,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5680774876063167
+    },
+    {
+      "name": "old/hard/mean_parallel_score_difference",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4878751795074425
+    },
+    {
+      "name": "old/hard/mean_parallel_score_difference",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4431026434260876
+    },
+    {
+      "name": "old/hard/mean_multiclass_score_difference",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5005364398807022
+    },
+    {
+      "name": "old/hard/mean_multiclass_score_difference",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4777173335656724
+    },
+    {
+      "name": "old/hard/mean_parallel_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5267300032703283
+    },
+    {
+      "name": "old/hard/mean_parallel_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.46859741967514035
+    },
+    {
+      "name": "old/hard/mean_multiclass_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5035149342867831
+    },
+    {
+      "name": "old/hard/mean_multiclass_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.49867120513041097
+    },
+    {
+      "name": "old/hard/pair_mean_parallel_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5088360395953246
+    },
+    {
+      "name": "old/hard/pair_mean_parallel_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.47392777700528094
+    },
+    {
+      "name": "old/hard/pair_mean_multiclass_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5180608575461686
+    },
+    {
+      "name": "old/hard/pair_mean_multiclass_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.49666881003413516
+    },
+    {
+      "name": "old/hard/esim_parallel_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.524752026145125
+    },
+    {
+      "name": "old/hard/esim_parallel_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.47950968461510274
+    },
+    {
+      "name": "old/hard/esim_multiclass_joint",
+      "split": "val",
+      "rows": 3003,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5099961888026258
+    },
+    {
+      "name": "old/hard/esim_multiclass_joint",
+      "split": "test",
+      "rows": 3065,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4768700623420024
+    },
+    {
+      "name": "full/easy/none_parallel_score_difference",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5736074308030947
+    },
+    {
+      "name": "full/easy/none_parallel_score_difference",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5113117817071925
+    },
+    {
+      "name": "full/easy/none_multiclass_score_difference",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5763836201047324
+    },
+    {
+      "name": "full/easy/none_multiclass_score_difference",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5244043191433516
+    },
+    {
+      "name": "full/easy/none_parallel_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6455695166941955
+    },
+    {
+      "name": "full/easy/none_parallel_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5611420436624939
+    },
+    {
+      "name": "full/easy/none_multiclass_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.657124569080049
+    },
+    {
+      "name": "full/easy/none_multiclass_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5805178521227851
+    },
+    {
+      "name": "full/hard/none_parallel_score_difference",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4744744859399807
+    },
+    {
+      "name": "full/hard/none_parallel_score_difference",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4453935163474319
+    },
+    {
+      "name": "full/hard/none_multiclass_score_difference",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.478235151124075
+    },
+    {
+      "name": "full/hard/none_multiclass_score_difference",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4475610944391575
+    },
+    {
+      "name": "full/hard/none_parallel_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5041272925029775
+    },
+    {
+      "name": "full/hard/none_parallel_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.46059046300002415
+    },
+    {
+      "name": "full/hard/none_multiclass_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5146799712793003
+    },
+    {
+      "name": "full/hard/none_multiclass_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5047635072398576
+    },
+    {
+      "name": "full/easy/mean_parallel_score_difference",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5641192055625116
+    },
+    {
+      "name": "full/easy/mean_parallel_score_difference",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5152726399525194
+    },
+    {
+      "name": "full/easy/mean_multiclass_score_difference",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5858291032438724
+    },
+    {
+      "name": "full/easy/mean_multiclass_score_difference",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5221631675573052
+    },
+    {
+      "name": "full/easy/mean_parallel_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6511382630368853
+    },
+    {
+      "name": "full/easy/mean_parallel_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5712602157818139
+    },
+    {
+      "name": "full/easy/mean_multiclass_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6465939776848169
+    },
+    {
+      "name": "full/easy/mean_multiclass_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5644760510233892
+    },
+    {
+      "name": "full/easy/pair_mean_parallel_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6521454175231943
+    },
+    {
+      "name": "full/easy/pair_mean_parallel_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.578256966003703
+    },
+    {
+      "name": "full/easy/pair_mean_multiclass_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6412802301028199
+    },
+    {
+      "name": "full/easy/pair_mean_multiclass_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5881873920432706
+    },
+    {
+      "name": "full/easy/esim_parallel_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6428116699381397
+    },
+    {
+      "name": "full/easy/esim_parallel_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5652226519825204
+    },
+    {
+      "name": "full/easy/esim_multiclass_joint",
+      "split": "val",
+      "rows": 3250,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.6432653731789238
+    },
+    {
+      "name": "full/easy/esim_multiclass_joint",
+      "split": "test",
+      "rows": 3330,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5607448784672212
+    },
+    {
+      "name": "full/hard/mean_parallel_score_difference",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.47354666407422913
+    },
+    {
+      "name": "full/hard/mean_parallel_score_difference",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4567401607023411
+    },
+    {
+      "name": "full/hard/mean_multiclass_score_difference",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4859667096044649
+    },
+    {
+      "name": "full/hard/mean_multiclass_score_difference",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4469425882828761
+    },
+    {
+      "name": "full/hard/mean_parallel_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5180042621444158
+    },
+    {
+      "name": "full/hard/mean_parallel_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.47860355775477875
+    },
+    {
+      "name": "full/hard/mean_multiclass_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5324623134693177
+    },
+    {
+      "name": "full/hard/mean_multiclass_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5000091285829689
+    },
+    {
+      "name": "full/hard/pair_mean_parallel_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5042959314524312
+    },
+    {
+      "name": "full/hard/pair_mean_parallel_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4888091620194362
+    },
+    {
+      "name": "full/hard/pair_mean_multiclass_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5182931514755856
+    },
+    {
+      "name": "full/hard/pair_mean_multiclass_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4764034970802631
+    },
+    {
+      "name": "full/hard/esim_parallel_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.526527943938154
+    },
+    {
+      "name": "full/hard/esim_parallel_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4857158223806299
+    },
+    {
+      "name": "full/hard/esim_multiclass_joint",
+      "split": "val",
+      "rows": 3560,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.5147525260771427
+    },
+    {
+      "name": "full/hard/esim_multiclass_joint",
+      "split": "test",
+      "rows": 3552,
+      "all_rows_present": true,
+      "all_metrics_recomputed": true,
+      "macro_f1": 0.4923083425788392
+    }
+  ],
+  "historical": [
+    "contvar_decoder_v1/contvar_decoder/data.py",
+    "contvar_decoder_v1/contvar_decoder/go_embeddings.py",
+    "contvar_decoder_v1/contvar_decoder/model.py",
+    "contvar_decoder_v1/contvar_decoder/predict.py",
+    "contvar_decoder_v1/contvar_decoder/prepare.py",
+    "contvar_decoder_v1/contvar_decoder/prepare_all.py",
+    "contvar_decoder_v1/contvar_decoder/report.py",
+    "contvar_decoder_v1/contvar_decoder/suite.py",
+    "contvar_decoder_v1/contvar_decoder/train.py",
+    "contvar_decoder_v1/contvar_decoder/verify.py",
+    "contvar_decoder_v1/contvar_decoder/window_prepare.py",
+    "contvar_decoder_v1/contvar_decoder/window_report.py",
+    "contvar_decoder_v1/contvar_decoder/window_suite.py",
+    "contvar_decoder_v1/contvar_decoder/__init__.py",
+    "contvar_decoder_v1/results/full_seed42/plan.json",
+    "contvar_decoder_v1/results/full_seed42/report_selection.json",
+    "contvar_decoder_v1/results/full_seed42/selection_before_test.json",
+    "contvar_decoder_v1/results/full_seed42/summary.json",
+    "contvar_decoder_v1/results/full_seed42/training_only_reference_rules.json",
+    "contvar_decoder_v1/results/full_seed42/training_progress.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_joint_lambda0.1/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/multiclass_score_difference_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_joint_lambda0.1/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/hard/parallel_score_difference_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_joint_lambda0.1/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/multiclass_score_difference_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_joint_lambda0.1/val_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/best.pt",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/config.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/history.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/results.json",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/test_predictions.tsv",
+    "contvar_decoder_v1/results/full_seed42/easy/parallel_score_difference_lambda0/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/baseline_sonuclari.csv",
+    "contvar_decoder_v1/results/window_mean_seed42/ortak_test_veri_katkisi.csv",
+    "contvar_decoder_v1/results/window_mean_seed42/plan.json",
+    "contvar_decoder_v1/results/window_mean_seed42/RAPOR.md",
+    "contvar_decoder_v1/results/window_mean_seed42/selection_before_test.json",
+    "contvar_decoder_v1/results/window_mean_seed42/summary.json",
+    "contvar_decoder_v1/results/window_mean_seed42/training_progress.json",
+    "contvar_decoder_v1/results/window_mean_seed42/tum_sonuclar.csv",
+    "contvar_decoder_v1/results/window_mean_seed42/verification.json",
+    "contvar_decoder_v1/results/window_mean_seed42/window_katkisi.csv",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/full_easy_egitim.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/full_easy_karsilastirma.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/full_hard_egitim.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/full_hard_karsilastirma.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/old_easy_egitim.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/old_easy_karsilastirma.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/old_hard_egitim.png",
+    "contvar_decoder_v1/results/window_mean_seed42/grafikler/old_hard_karsilastirma.png",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/test_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/val_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/test_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/val_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/none/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/hard/mean/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/none/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/old/easy/mean/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/test_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/val_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/test_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/val_baseline_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/none/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/hard/mean/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/none/parallel_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/multiclass_score_difference/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_joint/val_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/common_old_test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/config.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/history.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/results.json",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/test_predictions.tsv",
+    "contvar_decoder_v1/results/window_mean_seed42/full/easy/mean/parallel_score_difference/val_predictions.tsv"
+  ],
+  "archive": [
+    {
+      "file": "contvar_mf/data.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/go_embeddings.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/model.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/prepare.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/report.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/review_code.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/suite.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/train.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/util.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/validate_prepared.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/verify_run.py",
+      "match": true
+    },
+    {
+      "file": "contvar_mf/__init__.py",
+      "match": true
+    },
+    {
+      "file": "tests/test_models.py",
+      "match": true
+    },
+    {
+      "file": "tests/test_reporting_protocol.py",
+      "match": true
+    },
+    {
+      "file": "reports/baselines.csv",
+      "match": true
+    },
+    {
+      "file": "reports/ContVAR_MF_Window7_Rapor.pdf",
+      "match": true
+    },
+    {
+      "file": "reports/filtre_dokumu.csv",
+      "match": true
+    },
+    {
+      "file": "reports/ortak_test_kapsam_farklari.csv",
+      "match": true
+    },
+    {
+      "file": "reports/report_provenance.json",
+      "match": true
+    },
+    {
+      "file": "reports/SONUCLAR.html",
+      "match": true
+    },
+    {
+      "file": "reports/SONUCLAR.md",
+      "match": true
+    },
+    {
+      "file": "reports/tum_deneyler.csv",
+      "match": true
+    },
+    {
+      "file": "reports/validation_secimleri.csv",
+      "match": true
+    },
+    {
+      "file": "reports/veri_ozeti.csv",
+      "match": true
+    },
+    {
+      "file": "reports/window_karsilastirmalari.csv",
+      "match": true
+    },
+    {
+      "file": "reports/YORUM.md",
+      "match": true
+    },
+    {
+      "file": "reports/figures/00_protokol.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/00_protokol.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/01_tum_modeller.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/01_tum_modeller.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_siniflar_full.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_siniflar_full.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_siniflar_old.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_siniflar_old.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_window_joint.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/02_window_joint.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/03_ortak_test_kapsam.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/03_ortak_test_kapsam.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/04_confusion_common.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/04_confusion_common.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/04_confusion_native.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/04_confusion_native.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/05_ogrenme_egrileri.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/05_ogrenme_egrileri.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/06_pr_egrileri.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/06_pr_egrileri.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/07_yorum.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/07_yorum.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/deney_matrisi.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/deney_matrisi.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/egitim_referans_protokolu.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/egitim_referans_protokolu.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_esim.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_esim.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_mean.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_mean.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_none.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_none.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_pair_mean.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_pair_mean.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_score_difference.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/mimari_score_difference.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_full_easy.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_full_easy.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_full_hard.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_full_hard.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_old_easy.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_old_easy.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_old_hard.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/tablo_old_hard.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/validation_secimleri.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/validation_secimleri.svg",
+      "match": true
+    },
+    {
+      "file": "reports/figures/veri_tablosu.png",
+      "match": true
+    },
+    {
+      "file": "reports/figures/veri_tablosu.svg",
+      "match": true
+    },
+    {
+      "file": "verification/code_review.json",
+      "match": true
+    },
+    {
+      "file": "verification/current_status.json",
+      "match": true
+    },
+    {
+      "file": "verification/environment.json",
+      "match": true
+    },
+    {
+      "file": "verification/final_qa.json",
+      "match": true
+    },
+    {
+      "file": "verification/historical_files_after.json",
+      "match": true
+    },
+    {
+      "file": "verification/historical_files_before.json",
+      "match": true
+    },
+    {
+      "file": "verification/model_specs.json",
+      "match": true
+    },
+    {
+      "file": "verification/pdf_visual_review.json",
+      "match": true
+    },
+    {
+      "file": "verification/prepared_and_gradient_checks.json",
+      "match": true
+    },
+    {
+      "file": "verification/tests.xml",
+      "match": true
+    },
+    {
+      "file": "verification/architecture_previews/esim.png",
+      "match": true
+    },
+    {
+      "file": "verification/architecture_previews/mean.png",
+      "match": true
+    },
+    {
+      "file": "verification/architecture_previews/none.png",
+      "match": true
+    },
+    {
+      "file": "verification/architecture_previews/pair_mean.png",
+      "match": true
+    },
+    {
+      "file": "results/seed42/baselines.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/common_scope_comparisons.csv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/plan.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/selection_before_test.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/summary.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/training_progress.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/data.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/go_embeddings.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/model.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/suite.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/train.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/code_snapshot/util.py",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/esim_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/mean_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/none_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/hard/pair_mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/esim_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/mean_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/none_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/old/easy/pair_mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/esim_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/mean_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/none_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/hard/pair_mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/esim_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/mean_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_multiclass_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/none_parallel_score_difference/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_multiclass_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/best.pt",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/common_test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/config.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/fit_results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/history.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/results.json",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/test_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "results/seed42/full/easy/pair_mean_parallel_joint/val_predictions.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/common_easy_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/common_hard_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/features_window7.audit.json",
+      "match": true
+    },
+    {
+      "file": "prepared/full_easy_test_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full_easy_train_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full_easy_val_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full_hard_test_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full_hard_train_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full_hard_val_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/go_namespace_lookup.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/manifest.json",
+      "match": true
+    },
+    {
+      "file": "prepared/old_easy_test_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old_easy_train_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old_easy_val_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old_hard_test_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old_hard_train_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old_hard_val_excluded.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/ontology_provenance.json",
+      "match": true
+    },
+    {
+      "file": "prepared/full/easy_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full/easy_train.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full/easy_val.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full/hard_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full/hard_train.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/full/hard_val.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/easy_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/easy_train.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/easy_val.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/hard_test.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/hard_train.tsv",
+      "match": true
+    },
+    {
+      "file": "prepared/old/hard_val.tsv",
+      "match": true
+    },
+    {
+      "file": "logs/code_review.log",
+      "match": true
+    },
+    {
+      "file": "logs/final_qa.log",
+      "match": true
+    },
+    {
+      "file": "logs/package.log",
+      "match": false,
+      "explained": "Packaging completion message is written after ZIP closes; model/data/report unaffected"
+    },
+    {
+      "file": "logs/preflight.log",
+      "match": true
+    },
+    {
+      "file": "logs/preparation.log",
+      "match": true
+    },
+    {
+      "file": "logs/preparation_resumed.log",
+      "match": true
+    },
+    {
+      "file": "logs/report.log",
+      "match": true
+    },
+    {
+      "file": "logs/suite.log",
+      "match": true
+    },
+    {
+      "file": "logs/tests.log",
+      "match": true
+    },
+    {
+      "file": "README.md",
+      "match": true
+    },
+    {
+      "file": "DURUM.md",
+      "match": true
+    },
+    {
+      "file": "AGENTS.md",
+      "match": true
+    },
+    {
+      "file": "run_all.ps1",
+      "match": true
+    },
+    {
+      "file": "offline_run.py",
+      "match": true
+    },
+    {
+      "file": "package_run.py",
+      "match": true
+    },
+    {
+      "file": "requirements.txt",
+      "match": true
+    },
+    {
+      "file": "ontology/go-basic.json",
+      "match": true
+    },
+    {
+      "file": "ontology/go-basic.source.json",
+      "match": true
+    }
+  ],
+  "training_log_models": 48,
+  "test_log_models": 48,
+  "baseline_evaluations_recomputed": 36,
+  "report_tables": {
+    "models": 48,
+    "window_comparisons": 32,
+    "scope_comparisons": 24,
+    "baselines": 12,
+    "validation_selections": 4
+  },
+  "recomputed_conclusions": {
+    "mean_positive": 9,
+    "mean_total": 16,
+    "b_mean_positive": 5,
+    "b_mean_total": 8,
+    "esim_positive": 3,
+    "esim_total": 8,
+    "full_positive": 17,
+    "full_total": 24
+  },
+  "artifacts": {
+    "pdf_pages": 24,
+    "png_figures": 24,
+    "svg_figures": 24,
+    "html_figure_links_valid": true,
+    "pdf_matches_visual_review": true,
+    "report_after_all_tests": true
+  },
+  "official_ontology_ids_verified": 7799,
+  "archive_sha256": "6b5e37c413d77de7066676e7a2565469757414f657bf34dc7e088634531c9ec9",
+  "finite_tensor_models": 48,
+  "finite_tensor_values": 43251584,
+  "data_summary_rows_verified": 12,
+  "additional_historical_checkpoint_files": [
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/none/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/none/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/none/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/none/multiclass_joint/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/mean/parallel_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/mean/parallel_joint/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/mean/multiclass_score_difference/best.pt",
+    "contvar_decoder_v1/results/window_smoke_check/old/hard/mean/multiclass_joint/best.pt"
+  ],
+  "historical_checkpoint_tensor_sets_compared": 52,
+  "filter_report_rows_verified": 46,
+  "resolved_environment_issues": [
+    "MSIX PowerShell command launcher bypassed by directly starting the trusted local Python executable without a shell",
+    "Process-local environment supplied for PyTorch username/cache initialization; no system environment changes"
+  ],
+  "full_forward": {
+    "passed": true,
+    "models": 48,
+    "full_split_evaluations": 96,
+    "prediction_rows": 304644,
+    "maximum_absolute_score_difference": 2.980194091506405e-8,
+    "maximum_absolute_loss_difference": 9.252929693559508e-7,
+    "every_class_prediction_matched": true,
+    "proof_sha256": "208aff541c8593d297b61dad9f4a22dbb3b929637fb35f1ea9e673f8c9702556",
+    "script_sha256": "920a123eaa441e6933ff6e1731b3a156041364b45fc23ddf16316ae76d537fa9",
+    "process_exit_code": 0
+  },
+  "completed": "2026-11-18T03:12:51.038Z",
+  "file_and_metric_audit_passed": true,
+  "full_model_reexecution_passed": true,
+  "original_scientific_outputs_changed": false,
+  "verifier_source_sha256": {
+    "helpers": "da6c5573f31037e289bcdd23fdb5ea9e3d7cd2223cd784cd531c597520f5e429",
+    "audit": "80a6a9be968c1c82b4665e5495b2fd75f85b45e0d7577d81223a7fc03986e192"
+  }
+}
