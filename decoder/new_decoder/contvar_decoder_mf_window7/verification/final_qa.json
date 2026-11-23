@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checked_models": 48,
+  "independent_prediction_metrics": true,
+  "independent_baseline_metrics": 24,
+  "exported_tables_checked": {
+    "tum_deneyler.csv": 48,
+    "window_karsilastirmalari.csv": 32,
+    "ortak_test_kapsam_farklari.csv": 24,
+    "baselines.csv": 12,
+    "veri_ozeti.csv": 12,
+    "validation_secimleri.csv": 4
+  },
+  "checkpoint_first_batch_readbacks": [
+    "old/easy/pair_mean_multiclass_joint",
+    "old/hard/none_multiclass_joint",
+    "full/easy/none_multiclass_joint",
+    "full/hard/mean_multiclass_joint"
+  ],
+  "historical_files_checked": 326,
+  "historical_files_changed": [],
+  "extra_training_runs": 0,
+  "checked_at": "2026-11-18T02:27:43.066334+00:00"
+}

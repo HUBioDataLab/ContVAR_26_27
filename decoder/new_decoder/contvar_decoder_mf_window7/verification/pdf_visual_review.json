@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "pdf_sha256": "894a53d95c28e2034a465c420be967f3fb0642e3d3b40b8907e8b71bde46c60d",
+  "pages_reviewed": 24,
+  "renderer": "Poppler pdftoppm, 100 dpi",
+  "method": "All-page contact sheets plus detailed table, architecture, comparison and conclusion views",
+  "final_comparison_labels_checked": true,
+  "updated": "2026-11-18T05:27:48.7510753+03:00"
+}

@@ -1,0 +1,21 @@
+{
+  "stage": "completed",
+  "approved_training_runs": 48,
+  "completed_training_runs": 48,
+  "native_tests": 48,
+  "common_test_evaluations": 48,
+  "paired_scope_comparisons": 24,
+  "window_comparisons": 32,
+  "unit_tests_passed": 24,
+  "real_data_gradient_checks_passed": true,
+  "final_qa_passed": true,
+  "pdf_pages": 24,
+  "historical_files_checked": 326,
+  "historical_files_changed": 0,
+  "historical_results_used": false,
+  "summary": "results/seed42/summary.json",
+  "report": "reports/ContVAR_MF_Window7_Rapor.pdf",
+  "interpretation": "reports/YORUM.md",
+  "archive": "deliverables/ContVAR_MF_Window7_Code_Results.zip",
+  "updated": "2026-11-18T05:27:48.7828515+03:00"
+}

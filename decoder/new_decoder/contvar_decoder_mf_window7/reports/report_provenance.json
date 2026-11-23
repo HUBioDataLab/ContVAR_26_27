@@ -1,0 +1,33 @@
+{
+  "created": "2026-11-18T02:26:44.387319+00:00",
+  "summary_sha256": "879d1581a1e700597e8eb0fae5c303db77c1a65b454517e8e53fe35d3ffb65b5",
+  "report_code_sha256": "bdbac47059907aaf3fdd7b93dd5d1c7453eced1037ccfc4d5713957b5d930d81",
+  "historical_results_used": false,
+  "training_runs": 48,
+  "figures": [
+    "00_protokol",
+    "deney_matrisi",
+    "egitim_referans_protokolu",
+    "veri_tablosu",
+    "validation_secimleri",
+    "tablo_old_easy",
+    "tablo_old_hard",
+    "tablo_full_easy",
+    "tablo_full_hard",
+    "mimari_none",
+    "mimari_mean",
+    "mimari_pair_mean",
+    "mimari_esim",
+    "mimari_score_difference",
+    "01_tum_modeller",
+    "02_window_joint",
+    "02_siniflar_old",
+    "02_siniflar_full",
+    "03_ortak_test_kapsam",
+    "04_confusion_native",
+    "04_confusion_common",
+    "05_ogrenme_egrileri",
+    "06_pr_egrileri",
+    "07_yorum"
+  ]
+}

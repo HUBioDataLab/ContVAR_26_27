@@ -1,0 +1,1234 @@
+{
+  "old/easy": {
+    "majority": {
+      "native": {
+        "n": 2974,
+        "macro_f1": 0.2911616161616162,
+        "accuracy": 0.7753866845998655,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            2306,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            548,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7753866845998655,
+          "recall": 1.0,
+          "f1": 0.8734848484848485,
+          "support": 2306,
+          "auprc": 0.7753866845998655,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 120,
+          "auprc": 0.04034969737726967,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 548,
+          "auprc": 0.18426361802286484,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.28833792470156105,
+        "accuracy": 0.7621359223300971,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            785,
+            0,
+            0
+          ],
+          [
+            42,
+            0,
+            0
+          ],
+          [
+            203,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7621359223300971,
+          "recall": 1.0,
+          "f1": 0.8650137741046832,
+          "support": 785,
+          "auprc": 0.7621359223300971,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 42,
+          "auprc": 0.040776699029126215,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 203,
+          "auprc": 0.1970873786407767,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "go_majority": {
+      "native": {
+        "n": 2974,
+        "macro_f1": 0.43462088137857746,
+        "accuracy": 0.7797579018157363,
+        "balanced_accuracy": 0.41816807453879257,
+        "mcc": 0.2096273768621146,
+        "confusion_matrix": [
+          [
+            2229,
+            24,
+            53
+          ],
+          [
+            96,
+            19,
+            5
+          ],
+          [
+            467,
+            10,
+            71
+          ]
+        ],
+        "lof": {
+          "precision": 0.798352435530086,
+          "recall": 0.9666088464874241,
+          "f1": 0.8744605727736368,
+          "support": 2306,
+          "auprc": 0.8918820155708675,
+          "auroc": 0.7336082388561992
+        },
+        "gof": {
+          "precision": 0.3584905660377358,
+          "recall": 0.15833333333333333,
+          "f1": 0.21965317919075145,
+          "support": 120,
+          "auprc": 0.1774516735379835,
+          "auroc": 0.7258015066573231
+        },
+        "neutral": {
+          "precision": 0.5503875968992248,
+          "recall": 0.12956204379562045,
+          "f1": 0.20974889217134415,
+          "support": 548,
+          "auprc": 0.42657701632082534,
+          "auroc": 0.7483771460034541
+        },
+        "macro_auprc": 0.4986369018098921
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.43019126101563376,
+        "accuracy": 0.7689320388349514,
+        "balanced_accuracy": 0.4181066730814151,
+        "mcc": 0.208297611843179,
+        "confusion_matrix": [
+          [
+            761,
+            9,
+            15
+          ],
+          [
+            34,
+            7,
+            1
+          ],
+          [
+            175,
+            4,
+            24
+          ]
+        ],
+        "lof": {
+          "precision": 0.7845360824742268,
+          "recall": 0.9694267515923567,
+          "f1": 0.8672364672364672,
+          "support": 785,
+          "auprc": 0.8851173600160233,
+          "auroc": 0.7303990640842325
+        },
+        "gof": {
+          "precision": 0.35,
+          "recall": 0.16666666666666666,
+          "f1": 0.22580645161290322,
+          "support": 42,
+          "auprc": 0.1670066828569711,
+          "auroc": 0.7036702332754965
+        },
+        "neutral": {
+          "precision": 0.6,
+          "recall": 0.11822660098522167,
+          "f1": 0.19753086419753085,
+          "support": 203,
+          "auprc": 0.4349492897816658,
+          "auroc": 0.7398395291903194
+        },
+        "macro_auprc": 0.4956911108848867
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "protein_go_majority": {
+      "native": {
+        "n": 2974,
+        "macro_f1": 0.611145624205321,
+        "accuracy": 0.8342299932750504,
+        "balanced_accuracy": 0.5705820142665313,
+        "mcc": 0.48929588649152866,
+        "confusion_matrix": [
+          [
+            2183,
+            27,
+            96
+          ],
+          [
+            76,
+            34,
+            10
+          ],
+          [
+            274,
+            10,
+            264
+          ]
+        ],
+        "lof": {
+          "precision": 0.8618239242005526,
+          "recall": 0.9466608846487424,
+          "f1": 0.9022525315147758,
+          "support": 2306,
+          "auprc": 0.918345371134039,
+          "auroc": 0.8243150515967198
+        },
+        "gof": {
+          "precision": 0.4788732394366197,
+          "recall": 0.2833333333333333,
+          "f1": 0.35602094240837695,
+          "support": 120,
+          "auprc": 0.2869404431745615,
+          "auroc": 0.7604239663629992
+        },
+        "neutral": {
+          "precision": 0.7135135135135136,
+          "recall": 0.48175182481751827,
+          "f1": 0.5751633986928104,
+          "support": 548,
+          "auprc": 0.6375187126812623,
+          "auroc": 0.839505945324676
+        },
+        "macro_auprc": 0.6142681756632876
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.6124252443424703,
+        "accuracy": 0.8262135922330097,
+        "balanced_accuracy": 0.5708073169966427,
+        "mcc": 0.48760664660351566,
+        "confusion_matrix": [
+          [
+            741,
+            8,
+            36
+          ],
+          [
+            28,
+            12,
+            2
+          ],
+          [
+            101,
+            4,
+            98
+          ]
+        ],
+        "lof": {
+          "precision": 0.8517241379310345,
+          "recall": 0.9439490445859873,
+          "f1": 0.8954682779456193,
+          "support": 785,
+          "auprc": 0.9182192307088308,
+          "auroc": 0.8314155725984661
+        },
+        "gof": {
+          "precision": 0.5,
+          "recall": 0.2857142857142857,
+          "f1": 0.36363636363636365,
+          "support": 42,
+          "auprc": 0.2773486259765502,
+          "auroc": 0.735420281472913
+        },
+        "neutral": {
+          "precision": 0.7205882352941176,
+          "recall": 0.4827586206896552,
+          "f1": 0.5781710914454278,
+          "support": 203,
+          "auprc": 0.6527154587668412,
+          "auroc": 0.8514989784430638
+        },
+        "macro_auprc": 0.616094438484074
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    }
+  },
+  "old/hard": {
+    "majority": {
+      "native": {
+        "n": 3065,
+        "macro_f1": 0.2835895513060867,
+        "accuracy": 0.7402936378466558,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            2269,
+            0,
+            0
+          ],
+          [
+            210,
+            0,
+            0
+          ],
+          [
+            586,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7402936378466558,
+          "recall": 1.0,
+          "f1": 0.8507686539182602,
+          "support": 2269,
+          "auprc": 0.7402936378466558,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 210,
+          "auprc": 0.06851549755301795,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 586,
+          "auprc": 0.19119086460032628,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.2772083943387018,
+        "accuracy": 0.7117794486215538,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            284,
+            0,
+            0
+          ],
+          [
+            17,
+            0,
+            0
+          ],
+          [
+            98,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7117794486215538,
+          "recall": 1.0,
+          "f1": 0.8316251830161054,
+          "support": 284,
+          "auprc": 0.7117794486215538,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 17,
+          "auprc": 0.042606516290726815,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 98,
+          "auprc": 0.24561403508771928,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "go_majority": {
+      "native": {
+        "n": 3065,
+        "macro_f1": 0.4671070122289635,
+        "accuracy": 0.7438825448613376,
+        "balanced_accuracy": 0.44489725075555464,
+        "mcc": 0.25782578318788907,
+        "confusion_matrix": [
+          [
+            2087,
+            28,
+            154
+          ],
+          [
+            163,
+            28,
+            19
+          ],
+          [
+            401,
+            20,
+            165
+          ]
+        ],
+        "lof": {
+          "precision": 0.7872500943040363,
+          "recall": 0.9197884530630234,
+          "f1": 0.8483739837398374,
+          "support": 2269,
+          "auprc": 0.8142119194449795,
+          "auroc": 0.6657372362030514
+        },
+        "gof": {
+          "precision": 0.3684210526315789,
+          "recall": 0.13333333333333333,
+          "f1": 0.1958041958041958,
+          "support": 210,
+          "auprc": 0.16599275975717134,
+          "auroc": 0.6363981319322826
+        },
+        "neutral": {
+          "precision": 0.4881656804733728,
+          "recall": 0.2815699658703072,
+          "f1": 0.35714285714285715,
+          "support": 586,
+          "auprc": 0.41126010645070155,
+          "auroc": 0.6870786277082442
+        },
+        "macro_auprc": 0.46382159521761746
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.4609128319520028,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.4487301963038737,
+        "mcc": 0.2753009704400647,
+        "confusion_matrix": [
+          [
+            241,
+            0,
+            43
+          ],
+          [
+            16,
+            1,
+            0
+          ],
+          [
+            54,
+            1,
+            43
+          ]
+        ],
+        "lof": {
+          "precision": 0.77491961414791,
+          "recall": 0.8485915492957746,
+          "f1": 0.8100840336134454,
+          "support": 284,
+          "auprc": 0.813362102768938,
+          "auroc": 0.6980251071647275
+        },
+        "gof": {
+          "precision": 0.5,
+          "recall": 0.058823529411764705,
+          "f1": 0.10526315789473684,
+          "support": 17,
+          "auprc": 0.20823787777860137,
+          "auroc": 0.774022174314752
+        },
+        "neutral": {
+          "precision": 0.5,
+          "recall": 0.4387755102040816,
+          "f1": 0.4673913043478261,
+          "support": 98,
+          "auprc": 0.5612823293215164,
+          "auroc": 0.7036748254118923
+        },
+        "macro_auprc": 0.5276274366230186
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "protein_go_majority": {
+      "native": {
+        "n": 3065,
+        "macro_f1": 0.4671070122289635,
+        "accuracy": 0.7438825448613376,
+        "balanced_accuracy": 0.44489725075555464,
+        "mcc": 0.25782578318788907,
+        "confusion_matrix": [
+          [
+            2087,
+            28,
+            154
+          ],
+          [
+            163,
+            28,
+            19
+          ],
+          [
+            401,
+            20,
+            165
+          ]
+        ],
+        "lof": {
+          "precision": 0.7872500943040363,
+          "recall": 0.9197884530630234,
+          "f1": 0.8483739837398374,
+          "support": 2269,
+          "auprc": 0.8142119194449795,
+          "auroc": 0.6657372362030514
+        },
+        "gof": {
+          "precision": 0.3684210526315789,
+          "recall": 0.13333333333333333,
+          "f1": 0.1958041958041958,
+          "support": 210,
+          "auprc": 0.16599275975717134,
+          "auroc": 0.6363981319322826
+        },
+        "neutral": {
+          "precision": 0.4881656804733728,
+          "recall": 0.2815699658703072,
+          "f1": 0.35714285714285715,
+          "support": 586,
+          "auprc": 0.41126010645070155,
+          "auroc": 0.6870786277082442
+        },
+        "macro_auprc": 0.46382159521761746
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.4609128319520028,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.4487301963038737,
+        "mcc": 0.2753009704400647,
+        "confusion_matrix": [
+          [
+            241,
+            0,
+            43
+          ],
+          [
+            16,
+            1,
+            0
+          ],
+          [
+            54,
+            1,
+            43
+          ]
+        ],
+        "lof": {
+          "precision": 0.77491961414791,
+          "recall": 0.8485915492957746,
+          "f1": 0.8100840336134454,
+          "support": 284,
+          "auprc": 0.813362102768938,
+          "auroc": 0.6980251071647275
+        },
+        "gof": {
+          "precision": 0.5,
+          "recall": 0.058823529411764705,
+          "f1": 0.10526315789473684,
+          "support": 17,
+          "auprc": 0.20823787777860137,
+          "auroc": 0.774022174314752
+        },
+        "neutral": {
+          "precision": 0.5,
+          "recall": 0.4387755102040816,
+          "f1": 0.4673913043478261,
+          "support": 98,
+          "auprc": 0.5612823293215164,
+          "auroc": 0.7036748254118923
+        },
+        "macro_auprc": 0.5276274366230186
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    }
+  },
+  "full/easy": {
+    "majority": {
+      "native": {
+        "n": 3330,
+        "macro_f1": 0.29122272957889395,
+        "accuracy": 0.7756756756756756,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            2583,
+            0,
+            0
+          ],
+          [
+            114,
+            0,
+            0
+          ],
+          [
+            633,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7756756756756756,
+          "recall": 1.0,
+          "f1": 0.8736681887366818,
+          "support": 2583,
+          "auprc": 0.7756756756756756,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 114,
+          "auprc": 0.03423423423423423,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 633,
+          "auprc": 0.1900900900900901,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.28833792470156105,
+        "accuracy": 0.7621359223300971,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            785,
+            0,
+            0
+          ],
+          [
+            42,
+            0,
+            0
+          ],
+          [
+            203,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7621359223300971,
+          "recall": 1.0,
+          "f1": 0.8650137741046832,
+          "support": 785,
+          "auprc": 0.7621359223300971,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 42,
+          "auprc": 0.040776699029126215,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 203,
+          "auprc": 0.1970873786407767,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "go_majority": {
+      "native": {
+        "n": 3330,
+        "macro_f1": 0.4346134585055292,
+        "accuracy": 0.7645645645645646,
+        "balanced_accuracy": 0.4154049150155472,
+        "mcc": 0.18183065830566036,
+        "confusion_matrix": [
+          [
+            2418,
+            21,
+            144
+          ],
+          [
+            94,
+            15,
+            5
+          ],
+          [
+            511,
+            9,
+            113
+          ]
+        ],
+        "lof": {
+          "precision": 0.7998676811114787,
+          "recall": 0.9361207897793263,
+          "f1": 0.8626471637531217,
+          "support": 2583,
+          "auprc": 0.8722291842702262,
+          "auroc": 0.6971776640696221
+        },
+        "gof": {
+          "precision": 0.3333333333333333,
+          "recall": 0.13157894736842105,
+          "f1": 0.18867924528301888,
+          "support": 114,
+          "auprc": 0.14206441872736525,
+          "auroc": 0.7039023631840795
+        },
+        "neutral": {
+          "precision": 0.4312977099236641,
+          "recall": 0.17851500789889416,
+          "f1": 0.25251396648044694,
+          "support": 633,
+          "auprc": 0.38146321586782983,
+          "auroc": 0.7125874457664915
+        },
+        "macro_auprc": 0.46525227295514043
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.44932843791361715,
+        "accuracy": 0.7543689320388349,
+        "balanced_accuracy": 0.4261387049878154,
+        "mcc": 0.20145671105729682,
+        "confusion_matrix": [
+          [
+            729,
+            5,
+            51
+          ],
+          [
+            35,
+            6,
+            1
+          ],
+          [
+            157,
+            4,
+            42
+          ]
+        ],
+        "lof": {
+          "precision": 0.7915309446254072,
+          "recall": 0.9286624203821656,
+          "f1": 0.854630715123095,
+          "support": 785,
+          "auprc": 0.8722669804056127,
+          "auroc": 0.7103912647861692
+        },
+        "gof": {
+          "precision": 0.4,
+          "recall": 0.14285714285714285,
+          "f1": 0.21052631578947367,
+          "support": 42,
+          "auprc": 0.16976039775271362,
+          "auroc": 0.7217081164449586
+        },
+        "neutral": {
+          "precision": 0.44680851063829785,
+          "recall": 0.20689655172413793,
+          "f1": 0.2828282828282828,
+          "support": 203,
+          "auprc": 0.41436594943909566,
+          "auroc": 0.7130646112424872
+        },
+        "macro_auprc": 0.48546444253247395
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "protein_go_majority": {
+      "native": {
+        "n": 3330,
+        "macro_f1": 0.582333507155881,
+        "accuracy": 0.8138138138138138,
+        "balanced_accuracy": 0.5508701047884227,
+        "mcc": 0.4255752669681071,
+        "confusion_matrix": [
+          [
+            2397,
+            34,
+            152
+          ],
+          [
+            79,
+            32,
+            3
+          ],
+          [
+            340,
+            12,
+            281
+          ]
+        ],
+        "lof": {
+          "precision": 0.8512073863636364,
+          "recall": 0.9279907084785134,
+          "f1": 0.887942211520652,
+          "support": 2583,
+          "auprc": 0.9032240318064211,
+          "auroc": 0.7922439532293584
+        },
+        "gof": {
+          "precision": 0.41025641025641024,
+          "recall": 0.2807017543859649,
+          "f1": 0.3333333333333333,
+          "support": 114,
+          "auprc": 0.2855312828197472,
+          "auroc": 0.7653972462250154
+        },
+        "neutral": {
+          "precision": 0.6444954128440367,
+          "recall": 0.4439178515007899,
+          "f1": 0.5257249766136576,
+          "support": 633,
+          "auprc": 0.5711921649619889,
+          "auroc": 0.8025832927698613
+        },
+        "macro_auprc": 0.586649159862719
+      },
+      "common": {
+        "n": 1030,
+        "macro_f1": 0.6054299325575921,
+        "accuracy": 0.8184466019417476,
+        "balanced_accuracy": 0.564768040608146,
+        "mcc": 0.467885343527312,
+        "confusion_matrix": [
+          [
+            730,
+            8,
+            47
+          ],
+          [
+            31,
+            11,
+            0
+          ],
+          [
+            99,
+            2,
+            102
+          ]
+        ],
+        "lof": {
+          "precision": 0.8488372093023255,
+          "recall": 0.9299363057324841,
+          "f1": 0.8875379939209727,
+          "support": 785,
+          "auprc": 0.9106077357062013,
+          "auroc": 0.8175276225139738
+        },
+        "gof": {
+          "precision": 0.5238095238095238,
+          "recall": 0.2619047619047619,
+          "f1": 0.3492063492063492,
+          "support": 42,
+          "auprc": 0.34831288578182196,
+          "auroc": 0.8077646038172355
+        },
+        "neutral": {
+          "precision": 0.6845637583892618,
+          "recall": 0.5024630541871922,
+          "f1": 0.5795454545454546,
+          "support": 203,
+          "auprc": 0.6296586234435732,
+          "auroc": 0.827720230401296
+        },
+        "macro_auprc": 0.6295264149771987
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    }
+  },
+  "full/hard": {
+    "majority": {
+      "native": {
+        "n": 3552,
+        "macro_f1": 0.28620394173093405,
+        "accuracy": 0.7522522522522522,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            2672,
+            0,
+            0
+          ],
+          [
+            180,
+            0,
+            0
+          ],
+          [
+            700,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7522522522522522,
+          "recall": 1.0,
+          "f1": 0.8586118251928021,
+          "support": 2672,
+          "auprc": 0.7522522522522522,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 180,
+          "auprc": 0.05067567567567568,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 700,
+          "auprc": 0.19707207207207209,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.2772083943387018,
+        "accuracy": 0.7117794486215538,
+        "balanced_accuracy": 0.3333333333333333,
+        "mcc": 0.0,
+        "confusion_matrix": [
+          [
+            284,
+            0,
+            0
+          ],
+          [
+            17,
+            0,
+            0
+          ],
+          [
+            98,
+            0,
+            0
+          ]
+        ],
+        "lof": {
+          "precision": 0.7117794486215538,
+          "recall": 1.0,
+          "f1": 0.8316251830161054,
+          "support": 284,
+          "auprc": 0.7117794486215538,
+          "auroc": 0.5
+        },
+        "gof": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 17,
+          "auprc": 0.042606516290726815,
+          "auroc": 0.5
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 98,
+          "auprc": 0.24561403508771928,
+          "auroc": 0.5
+        },
+        "macro_auprc": 0.3333333333333333
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "go_majority": {
+      "native": {
+        "n": 3552,
+        "macro_f1": 0.46323157712633867,
+        "accuracy": 0.7353603603603603,
+        "balanced_accuracy": 0.44432428793207235,
+        "mcc": 0.23438011794819769,
+        "confusion_matrix": [
+          [
+            2361,
+            41,
+            270
+          ],
+          [
+            138,
+            22,
+            20
+          ],
+          [
+            464,
+            7,
+            229
+          ]
+        ],
+        "lof": {
+          "precision": 0.7968275396557543,
+          "recall": 0.8836077844311377,
+          "f1": 0.8379769299023957,
+          "support": 2672,
+          "auprc": 0.8374420935672586,
+          "auroc": 0.6739529463799673
+        },
+        "gof": {
+          "precision": 0.3142857142857143,
+          "recall": 0.12222222222222222,
+          "f1": 0.176,
+          "support": 180,
+          "auprc": 0.1657000024470463,
+          "auroc": 0.6848787399499143
+        },
+        "neutral": {
+          "precision": 0.441233140655106,
+          "recall": 0.3271428571428571,
+          "f1": 0.3757178014766202,
+          "support": 700,
+          "auprc": 0.4285331766474509,
+          "auroc": 0.7034071328391104
+        },
+        "macro_auprc": 0.47722509088725196
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.4942194987591498,
+        "accuracy": 0.706766917293233,
+        "balanced_accuracy": 0.47032615863246713,
+        "mcc": 0.27945189730298964,
+        "confusion_matrix": [
+          [
+            234,
+            0,
+            50
+          ],
+          [
+            13,
+            2,
+            2
+          ],
+          [
+            52,
+            0,
+            46
+          ]
+        ],
+        "lof": {
+          "precision": 0.782608695652174,
+          "recall": 0.823943661971831,
+          "f1": 0.8027444253859348,
+          "support": 284,
+          "auprc": 0.8770171296861863,
+          "auroc": 0.7622320881812615
+        },
+        "gof": {
+          "precision": 1.0,
+          "recall": 0.11764705882352941,
+          "f1": 0.21052631578947367,
+          "support": 17,
+          "auprc": 0.3070483456540511,
+          "auroc": 0.8000461964890669
+        },
+        "neutral": {
+          "precision": 0.46938775510204084,
+          "recall": 0.46938775510204084,
+          "f1": 0.46938775510204084,
+          "support": 98,
+          "auprc": 0.542516402590875,
+          "auroc": 0.7655773272764256
+        },
+        "macro_auprc": 0.5755272926437041
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    },
+    "protein_go_majority": {
+      "native": {
+        "n": 3552,
+        "macro_f1": 0.46323157712633867,
+        "accuracy": 0.7353603603603603,
+        "balanced_accuracy": 0.44432428793207235,
+        "mcc": 0.23438011794819769,
+        "confusion_matrix": [
+          [
+            2361,
+            41,
+            270
+          ],
+          [
+            138,
+            22,
+            20
+          ],
+          [
+            464,
+            7,
+            229
+          ]
+        ],
+        "lof": {
+          "precision": 0.7968275396557543,
+          "recall": 0.8836077844311377,
+          "f1": 0.8379769299023957,
+          "support": 2672,
+          "auprc": 0.8374420935672586,
+          "auroc": 0.6739529463799673
+        },
+        "gof": {
+          "precision": 0.3142857142857143,
+          "recall": 0.12222222222222222,
+          "f1": 0.176,
+          "support": 180,
+          "auprc": 0.1657000024470463,
+          "auroc": 0.6848787399499143
+        },
+        "neutral": {
+          "precision": 0.441233140655106,
+          "recall": 0.3271428571428571,
+          "f1": 0.3757178014766202,
+          "support": 700,
+          "auprc": 0.4285331766474509,
+          "auroc": 0.7034071328391104
+        },
+        "macro_auprc": 0.47722509088725196
+      },
+      "common": {
+        "n": 399,
+        "macro_f1": 0.4942194987591498,
+        "accuracy": 0.706766917293233,
+        "balanced_accuracy": 0.47032615863246713,
+        "mcc": 0.27945189730298964,
+        "confusion_matrix": [
+          [
+            234,
+            0,
+            50
+          ],
+          [
+            13,
+            2,
+            2
+          ],
+          [
+            52,
+            0,
+            46
+          ]
+        ],
+        "lof": {
+          "precision": 0.782608695652174,
+          "recall": 0.823943661971831,
+          "f1": 0.8027444253859348,
+          "support": 284,
+          "auprc": 0.8770171296861863,
+          "auroc": 0.7622320881812615
+        },
+        "gof": {
+          "precision": 1.0,
+          "recall": 0.11764705882352941,
+          "f1": 0.21052631578947367,
+          "support": 17,
+          "auprc": 0.3070483456540511,
+          "auroc": 0.8000461964890669
+        },
+        "neutral": {
+          "precision": 0.46938775510204084,
+          "recall": 0.46938775510204084,
+          "f1": 0.46938775510204084,
+          "support": 98,
+          "auprc": 0.542516402590875,
+          "auroc": 0.7655773272764256
+        },
+        "macro_auprc": 0.5755272926437041
+      },
+      "fitted_with": "this cohort/family training labels only",
+      "scores": "empirical training class proportions; majority decision; GO/global fallback"
+    }
+  }
+}

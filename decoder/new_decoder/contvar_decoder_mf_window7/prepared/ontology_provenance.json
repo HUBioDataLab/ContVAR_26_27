@@ -1,0 +1,8 @@
+{
+  "graph_id": "http://purl.obolibrary.org/obo/go.owl",
+  "version": "http://purl.obolibrary.org/obo/go/releases/2026-07-26/go.owl",
+  "sha256": "531d85b2e7a6d4b91290093b487f228994123cec3f45a50136cad2c4b91862ac",
+  "source_url": "https://current.geneontology.org/ontology/go-basic.json.gz",
+  "resolved_url": "https://current.geneontology.org/ontology/go-basic.json.gz",
+  "bytes": 71156277
+}

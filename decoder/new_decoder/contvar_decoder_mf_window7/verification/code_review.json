@@ -1,0 +1,19 @@
+{
+  "compiled": [
+    "contvar_mf\\data.py",
+    "contvar_mf\\go_embeddings.py",
+    "contvar_mf\\model.py",
+    "contvar_mf\\prepare.py",
+    "contvar_mf\\report.py",
+    "contvar_mf\\review_code.py",
+    "contvar_mf\\suite.py",
+    "contvar_mf\\train.py",
+    "contvar_mf\\util.py",
+    "contvar_mf\\validate_prepared.py",
+    "contvar_mf\\verify_run.py",
+    "contvar_mf\\__init__.py",
+    "tests\\test_models.py",
+    "tests\\test_reporting_protocol.py"
+  ],
+  "training_runs": 0
+}
