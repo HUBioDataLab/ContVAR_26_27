@@ -1,0 +1,4 @@
+# Run from the repository root; nested requirements resolve from this file.
+-r requirements.txt
+pytest>=8
+black>=24

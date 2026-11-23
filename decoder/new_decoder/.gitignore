@@ -1,0 +1,6 @@
+# Local experiment products; shared datasets stay in the root data directory.
+runs/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
