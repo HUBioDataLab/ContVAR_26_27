@@ -35,6 +35,7 @@ data/*
 # Run Outputs & Checkpoints
 decoder/phase_3_variant_decoder/runs/*.pt
 decoder/phase_3_variant_decoder/runs/*.bak*
+decoder/tournament_results/
 encoder/graph_encoder/protein_triplets_data/processed/
 
 # Unpublished PDFs (keep proposal.pdf tracked)
