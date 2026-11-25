@@ -1,5 +1,64 @@
 # ContVAR — MF / window-7 deneyleri
 
+## Düzeltilmiş V5 encoder verisi
+
+V5 çalışması, paket içindeki `prepared_v5_combinatorials` easy/hard split'lerini
+kullanır. `is_combinatorial=True` satırlar MF kapsamına giriyorsa kalır.
+Varyant kimliği, `protein_id` ile tam `mutations` alanından oluşur. H5 okumaları
+her ölçek için TSV'nin verdiği WT/VAR anahtarlarından yapılır. Decoder'a
+combinatorial genotipin encoder tarafından hazırlanmış özetleri, 7 token'lık
+window'u ve maskesi verilir. Encoder'ın site başına verileri pakette yer alır.
+
+Her encoder (`mean` ve `distance`) ve easy/hard split'i için aşağıdaki 12
+decoder koşulu çalıştırılır. İki encoder aynı örnekler ve etiketlerle
+karşılaştırılır. Augmentation sadece train'de tutulur. Eğitim ayarları ve
+validation Macro-F1 ile checkpoint seçimi aşağıdaki protokolü izler.
+
+Bu klasörden çalıştırın. `go-basic.obo` veya `go-basic.json` için daha önce
+kullanılan 2026-07-26 GO Basic yayını kullanılabilir.
+
+```bash
+python -m contvar_mf.v5 --bundle ../../.. --ontology /path/to/go-basic.obo \
+  --out ../../../data/v5_mf_window7
+
+python -m contvar_mf.suite --v5-bundle ../../.. --prepared ../../../data/v5_mf_window7 \
+  --out ../../../data/v5_mf_window7_seed42 --device cuda --resume
+
+python -m contvar_mf.verify_run --prepared ../../../data/v5_mf_window7 \
+  --results ../../../data/v5_mf_window7_seed42
+
+python -m contvar_mf.report --results ../../../data/v5_mf_window7_seed42 \
+  --out ../../../data/v5_mf_window7_seed42
+```
+
+ZIP'ler ve iki ayrı window H5 dosyası aynı bundle dizininde durur. Window
+dosyalarının encoder eşleşmesi H5 metadata'sından doğrulanır. CUDA bulunmayan
+bir ortamda yeni bir çıktı diziniyle `--device cpu` kullanılabilir. Başarılı
+çalışma `all_runs.csv` ve `common_scope_comparisons.csv` tablolarını,
+`summary.json`, train baseline'ları ve test tahminlerini üretir. Doğrulama
+çıktısı `final_qa.json`, sonuç özeti `SONUCLAR_V5.md` dosyasına yazılır.
+
+### V5 seed tekrarları
+
+`contvar_mf.suite --seed 43` ve `--seed 44`, V5 çalışmasının tüm 48 koşulunu
+ayrı çıktı dizinlerine yazar. `--out` verilmezse kaynak hazırlık dizininin
+yanında seed'e özgü bir dizin kullanılır. Dolu bir koşu dizini ancak `--resume`
+ve birebir eşleşen planla açılır. Mevcut doğrulanmış seed 42 sonuçları
+`contvar_mf.three_seed_report` için salt okunur girdidir.
+
+### V5 deneysel sınırlılıkları
+
+Danışmanın hazırladığı V5 split'leri tekrar deneylerinde korunur. İki
+encoder'da da Easy testte 5 ve Hard testte 9 girdinin train'de sayısal
+karşılığı bulundu. Validation da dahil edildiğinde Hard'da 10 benzersiz
+test satırı etkilendi. Seed 42 checkpoint'leriyle yapılan duyarlılık
+hesabında test Macro-F1 değişiminin mutlak değeri 0,001'in altında kaldı.
+Arşiv Phase 0 ve Phase 1 listelerinde potansiyel protein maruziyeti var.
+Bu listelerin iki V5 encoder checkpoint'inin gerçek eğitim üyeliğini
+gösterdiği doğrulanamadı.
+
+## 18 Kasım 2026 çalışması
+
 Bu klasör, 18 Kasım 2026'da kullanıcı tarafından onaylanan yeni 48 eğitim için ayrı çalışma sürümüdür.
 
 Mevcut durum: 48 bilimsel eğitim, 48 native test ve eşleştirilmiş ortak test değerlendirmeleri tamamlandı. Bağımsız doğrulama geçti. Önce reports/YORUM.md dosyasını, ardından 24 sayfalık reports/ContVAR_MF_Window7_Rapor.pdf raporunu okuyabilirsiniz. Ayrıntılı durum DURUM.md dosyasında.

@@ -33,7 +33,8 @@ class PairDataset(Dataset):
         self.frame = self.frame.reset_index(drop=True)
         if self.frame.empty or not self.frame.namespace.eq("molecular_function").all():
             raise ValueError("Expected a nonempty MF-only dataset")
-        if self.frame.is_combinatorial.astype(str).str.lower().eq("true").any():
+        if (not getattr(store, "allow_combinatorial", False)
+                and self.frame.is_combinatorial.astype(str).str.lower().eq("true").any()):
             raise ValueError("Combinatorial records are not allowed")
         if self.frame.split.iloc[0] != "train" and self.frame.augmented.astype(str).str.lower().eq("true").any():
             raise ValueError("Augmented evaluation records are not allowed")

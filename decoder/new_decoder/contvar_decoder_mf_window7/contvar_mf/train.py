@@ -79,6 +79,12 @@ def evaluate(model, loader, device):
             result[column] = summarize(mask)
         if column != "common_test" and (~mask).any():
             result["not_" + column] = summarize(~mask)
+    if "is_combinatorial" in frame:
+        combo = frame.is_combinatorial.astype(str).str.lower().eq("true").to_numpy()
+        if combo.any():
+            result["combinatorial"] = summarize(combo)
+            if (~combo).any():
+                result["single_substitution"] = summarize(~combo)
     for i, label in enumerate(LABELS):
         frame[f"score_{label.lower()}"] = c["scores"][:, i]
     frame["prediction"] = [LABELS[i] for i in c["prediction"]]
@@ -93,9 +99,10 @@ def atomic_torch_save(value, path):
 
 
 def fit(condition, datasets, device, destination, settings, provenance, resume=False):
+    seed = settings["seed"]
     destination.mkdir(parents=True, exist_ok=True)
     config_path = destination / "config.json"
-    config = dict(condition=condition, settings=settings, provenance=provenance,
+    config = dict(seed=seed, condition=condition, settings=settings, provenance=provenance,
                   labels=list(LABELS), encoder_frozen=True, anc2vec_frozen=True,
                   reverse_penalty=False, classification_only=True, class_balancing=False,
                   training_rows=len(datasets["train"]), validation_rows=len(datasets["val"]),
@@ -114,18 +121,20 @@ def fit(condition, datasets, device, destination, settings, provenance, resume=F
             return json.loads(done.read_text(encoding="utf-8"))
     else:
         write_json(config_path, config)
-    seed_everything(settings["seed"])
+    seed_everything(seed)
     model = PairedGODecoder(input_dim=1280, go_dim=datasets["train"].store.go.dimension,
         width=settings["width"], heads=settings["attention_heads"], head=condition["head"],
         pair_mode=condition["pair_mode"], window_mode=condition["window_mode"],
         dropout=settings["dropout"]).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=settings["lr"], weight_decay=settings["weight_decay"])
-    generator = torch.Generator().manual_seed(settings["seed"])
+    generator = torch.Generator().manual_seed(seed)
     loaders = {s: DataLoader(ds, batch_size=settings["batch_size"], shuffle=s == "train", num_workers=0,
         generator=generator if s == "train" else None, pin_memory=str(device).startswith("cuda")) for s, ds in datasets.items()}
     history, best, stale, first_epoch, elapsed_before = [], -1., 0, 1, 0.
     if resume and (destination / "last.pt").exists():
         last = torch.load(destination / "last.pt", map_location="cpu", weights_only=True)
+        if last["seed"] != seed:
+            raise ValueError("Resume checkpoint seed mismatch")
         model.load_state_dict(last["state_dict"])
         optimizer.load_state_dict(last["optimizer"])
         history = json.loads((destination / "history.json").read_text(encoding="utf-8"))[:last["epoch"]]
@@ -159,14 +168,14 @@ def fit(condition, datasets, device, destination, settings, provenance, resume=F
         write_json(destination / "history.json", history)
         if validation["macro_f1"] > best:
             best, stale = validation["macro_f1"], 0
-            checkpoint = dict(format="contvar_mf_window7_v1", labels=list(LABELS), model_spec=model.spec,
+            checkpoint = dict(format="contvar_mf_window7_v1", seed=seed, labels=list(LABELS), model_spec=model.spec,
                 state_dict={k: v.detach().cpu() for k, v in model.state_dict().items()},
                 epoch=epoch, validation_macro_f1=best, condition=condition, settings=settings,
                 provenance=provenance, encoder_frozen=True, reverse_penalty=False)
             atomic_torch_save(checkpoint, destination / "best.pt")
         else:
             stale += 1
-        atomic_torch_save(dict(state_dict={k: v.detach().cpu() for k, v in model.state_dict().items()},
+        atomic_torch_save(dict(seed=seed, state_dict={k: v.detach().cpu() for k, v in model.state_dict().items()},
             optimizer=optimizer.state_dict(), epoch=epoch, best=best, stale=stale,
             torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state_all() if str(device).startswith("cuda") else [],
             loader_rng=generator.get_state(), elapsed_seconds=elapsed_before + time.monotonic() - started), destination / "last.pt")
@@ -175,10 +184,23 @@ def fit(condition, datasets, device, destination, settings, provenance, resume=F
               f"elapsed={elapsed_before+time.monotonic()-started:.1f}s", flush=True)
     model, checkpoint = load_decoder(destination / "best.pt", device)
     validation, prediction = evaluate(model, loaders["val"], device)
-    prediction.to_csv(destination / "val_predictions.tsv", sep="\t", index=False)
-    result = dict(condition=condition, best_epoch=checkpoint["epoch"], epochs_run=len(history),
+    write_predictions(prediction, destination / "val_predictions.tsv", datasets["val"].store)
+    result = dict(seed=seed, condition=condition, best_epoch=checkpoint["epoch"], epochs_run=len(history),
         parameter_count=sum(p.numel() for p in model.parameters()),
         seconds=elapsed_before + time.monotonic() - started, validation=validation,
         completed=utc_now(), training_rows=len(datasets["train"]), validation_rows=len(datasets["val"]))
     write_json(destination / "fit_results.json", result)
+    if getattr(datasets["train"].store, "allow_combinatorial", False):
+        (destination / "last.pt").unlink(missing_ok=True)
     return result
+
+
+def write_predictions(frame, path, store):
+    if getattr(store, "allow_combinatorial", False):
+        # Embedding keys and other source fields remain joinable by sample_id.
+        columns = ["sample_id", "protein_id", "mutations", "matched_go_id", "label", "label_idx",
+                   "is_combinatorial", "augmented", "common_test", "common_key", "seen_in_train",
+                   "multiple_labels_for_input", "prediction", "score_lof", "score_gof", "score_neutral",
+                   "classification_loss"]
+        frame = frame[columns]
+    frame.to_csv(path, sep="\t", index=False)

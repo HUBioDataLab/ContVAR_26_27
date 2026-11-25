@@ -156,24 +156,24 @@ def build_cache(data, frames, destination, hashes):
     return audit
 
 
-def row_statistics(frame):
-    counts = frame.groupby(KEY, sort=False).label.nunique()
+def row_statistics(frame, key=KEY):
+    counts = frame.groupby(key, sort=False).label.nunique()
     conflicts = set(counts[counts > 1].index)
-    conflict_mask = pd.Series([tuple(r) in conflicts for r in frame[KEY].itertuples(index=False, name=None)])
+    conflict_mask = pd.Series([tuple(r) in conflicts for r in frame[key].itertuples(index=False, name=None)])
     return dict(rows=len(frame), proteins=int(frame.protein_id.nunique()),
-                variants=int(frame[KEY[:2]].drop_duplicates().shape[0]), go_terms=int(frame.matched_go_id.nunique()),
+                variants=int(frame[key[:2]].drop_duplicates().shape[0]), go_terms=int(frame.matched_go_id.nunique()),
                 labels={label: int(frame.label.eq(label).sum()) for label in LABELS},
                 augmented=int(frame.augmented.astype(str).str.lower().eq("true").sum()),
                 conflicting_keys=len(conflicts), conflicting_rows=int(conflict_mask.sum()),
-                same_label_duplicate_extra=int(frame.duplicated(KEY + ["label"]).sum()))
+                same_label_duplicate_extra=int(frame.duplicated(key + ["label"]).sum()))
 
 
-def split_overlaps(frames, family):
+def split_overlaps(frames, family, variant_key=KEY[:2]):
     result = {}
     for a, b in [("train", "val"), ("train", "test"), ("val", "test")]:
         proteins = len(set(frames[a].protein_id) & set(frames[b].protein_id))
-        variants = len(set(frames[a][KEY[:2]].itertuples(index=False, name=None)) &
-                       set(frames[b][KEY[:2]].itertuples(index=False, name=None)))
+        variants = len(set(frames[a][variant_key].itertuples(index=False, name=None)) &
+                       set(frames[b][variant_key].itertuples(index=False, name=None)))
         if variants or (family == "hard" and proteins):
             raise ValueError(f"Unexpected within-cohort split overlap: {family}/{a}/{b}")
         result[f"{a}/{b}"] = dict(protein_overlap=proteins, variant_overlap=variants)

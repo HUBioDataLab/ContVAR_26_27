@@ -16,6 +16,7 @@ from sklearn.metrics import precision_recall_curve, f1_score, average_precision_
 
 from .util import LABELS, WORKSPACE, run_conditions, sha256_file, utc_now, write_json
 from .suite import baseline_predictions
+from .v5 import V5_FORMAT
 
 WINDOWS = ["none", "mean", "pair_mean", "esim"]
 WN = dict(none="Penceresiz", mean="Mean-7", pair_mean="B mean-7", esim="B ESIM-7")
@@ -85,6 +86,55 @@ def diagram(mode, diff=False):
     return fig
 
 
+def report_v5(results, output, summary, manifest):
+    rows = [
+        "# ContVAR V5 MF sonuçları",
+        "",
+        "Her encoder aynı easy ve hard split'lerinde 12 decoder koşuluyla değerlendirildi.",
+        f"Checkpoint'ler validation Macro-F1 ile seçildi. Kullanılan seed {summary['plan']['settings']['seed']}.",
+        "",
+        "## Veri kapsamı",
+        "",
+        "| Split | Satır | Combinatorial |",
+        "|---|---:|---:|",
+    ]
+    for name, item in manifest["tables"].items():
+        stats = item["final"]
+        rows.append(f"| {name.removeprefix('v5/')} | {stats['rows']} | {stats['combinatorial']} |")
+    rows += [
+        "",
+        "## Validation ile seçilen modeller",
+        "",
+        "| Encoder / split | Decoder | Val Macro-F1 | Test Macro-F1 | Test MCC | Combinatorial Macro-F1 |",
+        "|---|---|---:|---:|---:|---:|",
+    ]
+    for group, name in summary["best_by_validation"].items():
+        result = summary["models"][name]
+        validation, test = result["validation"], result["test"]
+        combo = test.get("combinatorial")
+        combo_f1 = f"{combo['macro_f1']:.4f} (n={combo['n']})" if combo else "—"
+        rows.append(f"| {group} | {name.rsplit('/', 1)[1]} | {validation['macro_f1']:.4f} | "
+                    f"{test['macro_f1']:.4f} | {test['mcc']:.4f} | {combo_f1} |")
+    rows += [
+        "",
+        "## Eşleştirilmiş encoder karşılaştırması",
+        "",
+        "| Split | Distance lehine | Mean lehine | Eşit | Ortalama Macro-F1 farkı (distance − mean) |",
+        "|---|---:|---:|---:|---:|",
+    ]
+    pairs = pd.read_csv(results / "common_scope_comparisons.csv")
+    for family, group in pairs.groupby("family", sort=False):
+        delta = group.delta_macro_f1
+        rows.append(f"| {family} | {(delta > 0).sum()} | {(delta < 0).sum()} | "
+                    f"{(delta == 0).sum()} | {delta.mean():+.4f} |")
+    rows += ["", "Combinatorial Macro-F1, LOF, GOF ve NEUTRAL üzerinden hesaplanır. "
+             "Test alt kümelerinin sınıf destekleri `summary.json` içinde yer alır.",
+             "", "Tüm koşullar `all_runs.csv`, eşleştirilmiş farklar `common_scope_comparisons.csv` "
+             "ve yalnız train etiketleriyle hesaplanan baseline'lar `baselines.json` dosyasındadır.", ""]
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "SONUCLAR_V5.md").write_text("\n".join(rows), encoding="utf-8")
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--results",type=Path,default=WORKSPACE/"results/seed42")
@@ -97,6 +147,9 @@ def main():
     if summary["distinct_training_runs"]!=48 or len(summary["models"])!=48 or summary["historical_results_used"]:
         raise ValueError("Expected exactly 48 NEW completed runs")
     data=json.loads(Path(summary["preparation_manifest"]).read_text(encoding="utf-8"))
+    if data["format"] == V5_FORMAT:
+        report_v5(a.results, a.out, summary, data)
+        return
     baselines=json.loads((a.results/"baselines.json").read_text(encoding="utf-8"))
     a.out.mkdir(parents=True,exist_ok=True)
     figures=a.out/"figures";figures.mkdir(exist_ok=True)

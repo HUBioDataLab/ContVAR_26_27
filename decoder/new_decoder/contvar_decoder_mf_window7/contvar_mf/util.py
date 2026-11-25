@@ -31,12 +31,12 @@ def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
 
-def run_conditions():
-    """Four stages: old none, old window, full none, full window."""
+def run_conditions(cohorts=("old", "full")):
+    """Apply the same decoder matrix to each feature source and split family."""
     result = []
     basic = [("parallel", "score_difference"), ("multiclass", "score_difference"),
              ("parallel", "joint"), ("multiclass", "joint")]
-    for cohort in ("old", "full"):
+    for cohort in cohorts:
         for phase in ("none", "window"):
             for family in ("easy", "hard"):
                 conditions = [("none", h, p) for h, p in basic] if phase == "none" else (
@@ -46,5 +46,4 @@ def run_conditions():
                     result.append(dict(number=len(result) + 1, cohort=cohort, family=family,
                                        window_mode=window_mode, head=head, pair_mode=pair_mode,
                                        name=f"{cohort}/{family}/{window_mode}_{head}_{pair_mode}"))
-    assert len(result) == 48
     return result

@@ -1,4 +1,5 @@
 """Independently check the completed 48-run result package and checkpoint readback."""
+import argparse
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -11,19 +12,36 @@ from torch.utils.data import DataLoader
 
 from .data import FeatureStore, PairDataset, model_inputs
 from .model import load_decoder
-from .suite import verify_preparation
+from .suite import parse_seed, verify_preparation
 from .train import seed_everything
 from .util import LABELS, WORKSPACE, sha256_file, utc_now, write_json
+from .v5 import V5_FORMAT, V5Bundle, V5FeatureStore
 
 
 def main():
-    root=WORKSPACE / "results/seed42"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--results", type=Path, default=WORKSPACE / "results/seed42")
+    parser.add_argument("--prepared", type=Path, default=WORKSPACE / "prepared")
+    parser.add_argument("--v5-bundle", type=Path)
+    parser.add_argument("--seed", type=parse_seed, help="Expected seed; otherwise read it from the plan")
+    args = parser.parse_args()
+    root = args.results
     summary=json.loads((root / "summary.json").read_text(encoding="utf-8"))
-    prepared=WORKSPACE / "prepared"
+    plan = json.loads((root / "plan.json").read_text(encoding="utf-8"))
+    assert plan == summary["plan"]
+    seed = plan["settings"]["seed"]
+    if args.seed is not None and seed != args.seed:
+        raise ValueError(f"Expected seed {args.seed}, found {seed}")
+    prepared = args.prepared
     manifest=verify_preparation(prepared)
+    is_v5 = manifest["format"] == V5_FORMAT
+    bundle = None
+    if is_v5:
+        bundle = V5Bundle(args.v5_bundle or manifest["source_data"])
+        assert bundle.hashes() == manifest["source_feature_sha256"]
     lock=json.loads((root / "selection_before_test.json").read_text(encoding="utf-8"))
     assert len(summary["models"])==summary["distinct_training_runs"]==48
-    assert summary["plan"]["settings"]["seed"]==42
+    assert summary.get("seed", seed) == lock.get("seed", seed) == seed
     assert not summary["historical_results_used"] and not summary["test_used_for_selection"]
     assert sha256_file(WORKSPACE / "offline_run.py")==summary["plan"]["provenance"]["offline_runner_sha256"]
     for name,digest in summary["plan"]["provenance"]["source_code_sha256"].items():
@@ -36,16 +54,18 @@ def main():
         config=json.loads((folder / "config.json").read_text(encoding="utf-8"))
         assert config["encoder_frozen"] and config["anc2vec_frozen"]
         assert config["classification_only"] and not config["reverse_penalty"]
-        assert config["settings"]["seed"]==42 and config["settings"]["patience"]==5
+        assert config["settings"] == plan["settings"]
+        assert config.get("seed", seed) == result.get("seed", seed) == seed
         history=json.loads((folder / "history.json").read_text(encoding="utf-8"))
         best=max(history,key=lambda r:r["validation"]["macro_f1"])
         assert best["epoch"]==result["best_epoch"] and len(history)==result["epochs_run"]<=20
         assert np.isclose(best["validation"]["macro_f1"],result["validation"]["macro_f1"])
         assert sha256_file(folder / "best.pt")==lock["checkpoints"][name]["checkpoint_sha256"]
-        expected=pd.read_csv(prepared / c["cohort"] / f"{c['family']}_test.tsv",sep="\t",keep_default_na=False,low_memory=False)
+        expected=pd.read_csv(prepared / ("v5" if is_v5 else c["cohort"]) / f"{c['family']}_test.tsv",sep="\t",keep_default_na=False,low_memory=False)
         pred=pd.read_csv(folder / "test_predictions.tsv",sep="\t",keep_default_na=False,low_memory=False)
         assert pred.sample_id.tolist()==expected.sample_id.tolist()
         assert pred.label.tolist()==expected.label.tolist()
+        assert pred.label_idx.tolist()==expected.label_idx.tolist()
         scores=pred[[f"score_{label.lower()}" for label in LABELS]].to_numpy()
         assert np.isfinite(scores).all() and (scores>=0).all() and (scores<=1).all()
         if c["head"]=="multiclass":
@@ -56,8 +76,15 @@ def main():
             predicted=np.where(scores[:,:2].max(1)>=.5,scores[:,:2].argmax(1),2)
         assert pred.prediction.tolist()==[LABELS[i] for i in predicted]
         common=pred.common_test.astype(str).str.lower().eq("true").to_numpy()
-        for label,mask,m in [("native",np.ones(len(pred),dtype=bool),result["test"]),
-                             ("common",common,result["test"]["common_test"])]:
+        domains = [(np.ones(len(pred), dtype=bool), result["test"]), (common, result["test"]["common_test"])]
+        if is_v5:
+            assert pred.mutations.equals(expected.mutations)
+            assert pred.is_combinatorial.equals(expected.is_combinatorial)
+            combo = pred.is_combinatorial.to_numpy(dtype=bool)
+            for mask, domain in ((combo, "combinatorial"), (~combo, "single_substitution")):
+                if mask.any():
+                    domains.append((mask, result["test"][domain]))
+        for mask,m in domains:
             y=pred.label_idx.to_numpy()[mask];p=predicted[mask]
             assert len(y)==m["n"]
             assert np.isclose(f1_score(y,p,labels=[0,1,2],average="macro",zero_division=0),m["macro_f1"],atol=1e-7)
@@ -73,8 +100,9 @@ def main():
     baseline_checks=0
     for key,rules in stored_baselines.items():
         cohort,family=key.split("/")
-        train=pd.read_csv(prepared / cohort / f"{family}_train.tsv",sep="\t",keep_default_na=False,low_memory=False)
-        test=pd.read_csv(prepared / cohort / f"{family}_test.tsv",sep="\t",keep_default_na=False,low_memory=False)
+        folder = prepared / ("v5" if is_v5 else cohort)
+        train=pd.read_csv(folder / f"{family}_train.tsv",sep="\t",keep_default_na=False,low_memory=False)
+        test=pd.read_csv(folder / f"{family}_test.tsv",sep="\t",keep_default_na=False,low_memory=False)
         overall=Counter(train.label)
         by_go,by_protein_go=defaultdict(Counter),defaultdict(Counter)
         for protein,go,label in train[["protein_id","matched_go_id","label"]].itertuples(index=False,name=None):
@@ -96,20 +124,43 @@ def main():
     # Check actual persisted weights against exported scores on a first batch,
     # for each validation-selected model. This adds no training run.
     torch.set_num_threads(4)
-    seed_everything(42)
-    device="cuda" if torch.cuda.is_available() else "cpu"
-    store=FeatureStore(prepared)
+    seed_everything(seed)
+    device=summary["plan"]["device"] if is_v5 else ("cuda" if torch.cuda.is_available() else "cpu")
+    store = None if is_v5 else FeatureStore(prepared)
+    last_cohort = None
     readbacks=[]
     for name in summary["best_by_validation"].values():
         c=summary["models"][name]["condition"]
-        dataset=PairDataset(prepared / c["cohort"] / f"{c['family']}_test.tsv",store,c["window_mode"])
+        if is_v5 and last_cohort != c["cohort"]:
+            del store
+            store = V5FeatureStore(prepared, bundle, c["cohort"])
+            last_cohort = c["cohort"]
+        dataset=PairDataset(prepared / ("v5" if is_v5 else c["cohort"]) / f"{c['family']}_test.tsv",store,c["window_mode"])
         batch=next(iter(DataLoader(dataset,batch_size=128)))
-        model,_=load_decoder(root / name / "best.pt",device)
+        model,checkpoint=load_decoder(root / name / "best.pt",device)
+        assert checkpoint["settings"] == plan["settings"]
+        assert checkpoint.get("seed", seed) == seed
         with torch.no_grad(): output=model(**model_inputs(batch,device))
         saved=pd.read_csv(root / name / "test_predictions.tsv",sep="\t",keep_default_na=False,low_memory=False).iloc[:len(batch["label"])]
         np.testing.assert_allclose(output["scores"].cpu().numpy(),saved[[f"score_{s.lower()}" for s in LABELS]].to_numpy(),atol=2e-6,rtol=2e-6)
         assert saved.prediction.tolist()==[LABELS[i] for i in output["prediction"].cpu().tolist()]
         readbacks.append(name)
+        del dataset
+    if is_v5:
+        runs = pd.read_csv(root / "all_runs.csv")
+        pairs = pd.read_csv(root / "common_scope_comparisons.csv")
+        assert len(runs) == 48 and len(pairs) == 24
+        for row in runs.itertuples(index=False):
+            name = f"{row.encoder}/{row.family}/{row.window_mode}_{row.head}_{row.pair_mode}"
+            test = summary["models"][name]["test"]
+            assert np.isclose(row.test_macro_f1, test["macro_f1"])
+            assert row.combinatorial_rows == test.get("combinatorial", {}).get("n", 0)
+        result = dict(passed=True, seed=seed, checked_models=len(checks), independent_prediction_metrics=True,
+                      independent_baseline_metrics=baseline_checks, checkpoint_first_batch_readbacks=readbacks,
+                      checked_at=utc_now())
+        write_json(root / "final_qa.json", result)
+        print(json.dumps(result, ensure_ascii=False))
+        return
     historical=json.loads((WORKSPACE / "verification/historical_files_before.json").read_text(encoding="utf-8"))
     changed=[name for name,value in historical.items() if sha256_file(WORKSPACE.parent / name)!=value["sha256"]]
     assert not changed, changed
