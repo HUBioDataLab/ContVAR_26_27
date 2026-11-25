@@ -343,13 +343,18 @@ def parse_alphafold_pdb_for_positions(pdb_text: str, positions: list[int]) -> di
 
 
 def fetch_one_alphafold(pid: str, positions: list[int], session: requests.Session) -> tuple[str, dict[int, list[float]] | None]:
-    """Fetch AlphaFold PDB (v4 direct URL, fallback to API v6/latest) and parse in memory."""
-    urls = [f"https://alphafold.ebi.ac.uk/files/AF-{pid}-F1-model_v4.pdb"]
+    """Fetch AlphaFold PDB (v6 direct CDN URL, fallback to v4/API) and parse in memory."""
+    for url in (
+        f"https://alphafold.ebi.ac.uk/files/AF-{pid}-F1-model_v6.pdb",
+        f"https://alphafold.ebi.ac.uk/files/AF-{pid}-F1-model_v4.pdb",
+    ):
+        try:
+            r = session.get(url, timeout=12)
+            if r.status_code == 200 and r.text.startswith(("HEADER", "TITLE", "ATOM", "MODEL")):
+                return pid, parse_alphafold_pdb_for_positions(r.text, positions)
+        except Exception:
+            pass
     try:
-        r = session.get(urls[0], timeout=12)
-        if r.status_code == 200 and r.text.startswith(("HEADER", "TITLE", "ATOM", "MODEL")):
-            return pid, parse_alphafold_pdb_for_positions(r.text, positions)
-        # Fallback to AlphaFold REST API to get latest model version URL (e.g. v6)
         api_r = session.get(f"https://alphafold.ebi.ac.uk/api/prediction/{pid}", timeout=12)
         if api_r.status_code == 200:
             entries = api_r.json()
