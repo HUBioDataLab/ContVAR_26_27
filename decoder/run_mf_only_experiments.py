@@ -341,11 +341,16 @@ def main() -> None:
     p.add_argument("--heads", type=int, default=4)
     p.add_argument("--lr", type=float, default=3e-4)
     p.add_argument("--out-dir", type=Path, default=RESULTS_ROOT)
+    p.add_argument("--exps", nargs="+", default=None, help="Optional subset of experiment names to run")
     p.add_argument("--resume", action="store_true")
     args = p.parse_args()
 
+    selected_exps = [e for e in MF_EXPERIMENTS if (args.exps is None or e["name"] in args.exps)]
+    if not selected_exps:
+        raise ValueError(f"No matching experiments for --exps {args.exps}")
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    total_runs = len(MF_EXPERIMENTS) * len(args.seeds)
+    total_runs = len(selected_exps) * len(args.seeds)
 
     mf_ids = set(json.loads((DATA_DIR / "mf_go_ids.json").read_text(encoding="utf-8")))
 
@@ -390,7 +395,7 @@ def main() -> None:
     all_results = []
     run_idx = 0
     start_time = time.perf_counter()
-    for exp in MF_EXPERIMENTS:
+    for exp in selected_exps:
         for seed in args.seeds:
             run_idx += 1
             res = run_one(
